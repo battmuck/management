@@ -13,7 +13,7 @@ const HeroSection = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
-        <div className="absolute inset-0 bg-foreground/50" />
+        <div className="absolute inset-0 bg-foreground/60" />
       </div>
 
       {/* Content */}
@@ -23,12 +23,12 @@ const HeroSection = () => {
         </p>
         
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-primary-foreground mb-6 leading-tight animate-fade-in" style={{ animationDelay: '0.1s' }}>
-          Thinking About Switching Your<br />
-          <span className="text-primary">Maui Property Manager?</span>
+          Choosing the Right<br />
+          <span className="text-primary drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">Maui Property Manager?</span>
         </h1>
         
         <p className="text-lg md:text-xl text-primary-foreground/85 font-sans font-light max-w-2xl mx-auto mb-10 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-          See why Maui property owners are choosing Hawaii Vacation Homes for higher revenue, personalized service, and true local expertise.
+          If you're researching MyPerfectStays or comparing Maui property management options, you're in the right place. See how Hawaii Vacation Homes compares when it comes to revenue performance, owner communication, and hands-on local care.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: '0.3s' }}>
