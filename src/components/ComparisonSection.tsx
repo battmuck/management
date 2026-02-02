@@ -10,60 +10,75 @@ interface ComparisonItem {
 
 const comparisonData: ComparisonItem[] = [
   {
-    feature: "Local Maui-Based Team",
-    us: "yes",
-    them: "no",
-    usNote: "100% Hawaii-based staff",
-    themNote: "Mainland call centers",
-  },
-  {
-    feature: "Transparent Fee Structure",
-    us: "yes",
-    them: "partial",
-    usNote: "No hidden fees, ever",
-    themNote: "Additional charges for marketing, photos",
-  },
-  {
-    feature: "24/7 Owner Communication",
-    us: "yes",
-    them: "partial",
-    usNote: "Direct line to your property manager",
-    themNote: "Ticket-based support",
-  },
-  {
-    feature: "Dynamic Pricing Optimization",
+    feature: "Multi-Channel Marketing",
     us: "yes",
     them: "yes",
-    usNote: "AI + local market expertise",
-    themNote: "Algorithm-only approach",
+    usNote: "Across Airbnb, Vrbo, Booking.com, and all major channels",
   },
   {
-    feature: "Professional Photography Included",
+    feature: "Revenue Management & Dynamic Pricing",
     us: "yes",
-    them: "no",
-    usNote: "Included in management",
-    themNote: "Additional $300-500 charge",
+    them: "yes",
   },
   {
-    feature: "Direct Booking Website",
+    feature: "Guest Marketing & Direct Bookings",
     us: "yes",
-    them: "partial",
-    usNote: "Custom property page",
-    themNote: "Generic template only",
-  },
-  {
-    feature: "In-Person Property Inspections",
-    us: "yes",
-    them: "no",
-    usNote: "Weekly walkthrough included",
-    themNote: "Photo-only verification",
+    them: "yes",
+    usNote: "Including outreach to past guests",
   },
   {
     feature: "Owner Portal & Reporting",
     us: "yes",
     them: "yes",
-    usNote: "Real-time revenue dashboard",
-    themNote: "Monthly reports only",
+  },
+  {
+    feature: "Airbnb Review Rating",
+    us: "yes",
+    them: "partial",
+    usNote: "4.96 / 5 average rating",
+    themNote: "4.70 / 5 average rating",
+  },
+  {
+    feature: "Management Model",
+    us: "yes",
+    them: "partial",
+    usNote: "Boutique management with personalized attention",
+    themNote: "Large-scale management across a high-volume portfolio",
+  },
+  {
+    feature: "Revenue Management Strategy",
+    us: "yes",
+    them: "partial",
+    usNote: "Individual pricing strategy customized per listing",
+    themNote: "Group-based pricing changes applied across similar units",
+  },
+  {
+    feature: "Owner Communication & Support",
+    us: "yes",
+    them: "partial",
+    usNote: "Direct access to a dedicated owner relations contact (Matt)",
+    themNote: "Team-based support structure",
+  },
+  {
+    feature: "Flexibility & Customization",
+    us: "yes",
+    them: "partial",
+    usNote: "Flexible, property-specific approach tailored to each owner",
+    themNote: "Standardized processes designed for consistency",
+  },
+  {
+    feature: "Fee Structure",
+    us: "yes",
+    them: "no",
+    usNote: "Transparent pricing with no admin, marketing, or linen fees",
+    themNote: "Additional admin, marketing, linen, and ancillary fees",
+  },
+  {
+    feature: "Photography",
+    us: "yes",
+    them: "no",
+    usNote: "Professional photography included",
+    themNote: "Photography often billed separately",
   },
 ];
 
@@ -165,6 +180,11 @@ const ComparisonSection = () => {
             </div>
           ))}
         </div>
+
+        {/* Credibility disclaimer */}
+        <p className="text-xs text-muted-foreground text-center mt-8 font-sans">
+          Comparison based on publicly available information and typical service structures. Offerings and fees may vary by property.
+        </p>
       </div>
     </section>
   );
