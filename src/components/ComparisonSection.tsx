@@ -77,7 +77,7 @@ const comparisonData: ComparisonItem[] = [
     us: "yes",
     them: "no",
     usNote: "Professional photography included for new owners",
-    themNote: "Photography often billed separately",
+    themNote: "Photography often billed at owner's expense",
   },
 ];
 
