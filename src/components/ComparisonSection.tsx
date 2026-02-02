@@ -73,10 +73,10 @@ const comparisonData: ComparisonItem[] = [
     themNote: "Additional admin, marketing, linen, and ancillary fees",
   },
   {
-    feature: "Photography",
+    feature: "Listing Photography",
     us: "yes",
     them: "no",
-    usNote: "Professional photography included",
+    usNote: "Professional photography included for new owners",
     themNote: "Photography often billed separately",
   },
 ];
