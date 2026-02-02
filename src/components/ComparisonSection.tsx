@@ -122,8 +122,8 @@ const ComparisonSection = () => {
             <thead>
               <tr className="bg-muted">
                 <th className="text-left p-4 font-sans font-semibold text-foreground">Feature</th>
-                <th className="text-center p-4 font-sans font-semibold text-primary bg-primary/10">Hawaii Vacation Homes</th>
-                <th className="text-center p-4 font-sans font-semibold text-muted-foreground">MyPerfectStays</th>
+                <th className="text-center p-4 py-6 font-serif font-bold text-lg text-primary bg-primary/10">Hawaii Vacation Homes</th>
+                <th className="text-center p-4 py-6 font-serif font-bold text-lg text-muted-foreground">MyPerfectStays</th>
               </tr>
             </thead>
             <tbody>
