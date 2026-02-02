@@ -55,7 +55,7 @@ const comparisonData: ComparisonItem[] = [
     feature: "Owner Communication & Support",
     us: "yes",
     them: "partial",
-    usNote: "Direct access to a dedicated owner relations contact (Matt)",
+    usNote: "Direct access to the owner for personalized owner relations support",
     themNote: "Team-based support structure",
   },
   {
@@ -70,7 +70,7 @@ const comparisonData: ComparisonItem[] = [
     us: "yes",
     them: "no",
     usNote: "Transparent pricing with no admin, marketing, or linen fees",
-    themNote: "Additional admin, marketing, linen, and ancillary fees",
+    themNote: "Additional admin, marketing, linen, and ancillary fees may apply",
   },
   {
     feature: "Listing Photography",
@@ -188,7 +188,7 @@ const ComparisonSection = () => {
 
         {/* Credibility disclaimer */}
         <p className="text-xs text-muted-foreground text-center mt-8 font-sans">
-          Comparison based on publicly available information and typical service structures. Offerings and fees may vary by property.
+          Comparison based on publicly available information and typical service structures at the time of writing. Offerings, processes, and fees may vary by property.
         </p>
       </div>
     </section>
