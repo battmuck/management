@@ -11,7 +11,7 @@ const Footer = () => {
             <img 
               src={logoStacked} 
               alt="Hawaii Vacation Homes" 
-              className="h-28 mb-6 object-contain self-start"
+              className="h-40 mb-6 object-contain self-start"
             />
             <div className="mt-auto">
               <p className="text-foreground font-sans font-medium">
