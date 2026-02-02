@@ -81,24 +81,24 @@ const comparisonData: ComparisonItem[] = [
   },
 ];
 
-const StatusIcon = ({ status }: { status: "yes" | "no" | "partial" }) => {
+const StatusIcon = ({ status, isUs = false }: { status: "yes" | "no" | "partial"; isUs?: boolean }) => {
   if (status === "yes") {
     return (
-      <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
-        <Check className="w-5 h-5 text-primary" />
+      <div className={`w-10 h-10 rounded-full flex items-center justify-center ${isUs ? "bg-primary/30" : "bg-primary/20"}`}>
+        <Check className={`w-6 h-6 ${isUs ? "text-primary" : "text-primary/80"}`} strokeWidth={3} />
       </div>
     );
   }
   if (status === "no") {
     return (
-      <div className="w-8 h-8 rounded-full bg-destructive/20 flex items-center justify-center">
-        <X className="w-5 h-5 text-destructive" />
+      <div className="w-10 h-10 rounded-full bg-destructive/15 flex items-center justify-center">
+        <X className="w-6 h-6 text-destructive/70" strokeWidth={2.5} />
       </div>
     );
   }
   return (
-    <div className="w-8 h-8 rounded-full bg-warning/20 flex items-center justify-center">
-      <Minus className="w-5 h-5 text-warning" />
+    <div className="w-10 h-10 rounded-full bg-warning/15 flex items-center justify-center">
+      <Minus className="w-6 h-6 text-warning/80" strokeWidth={2.5} />
     </div>
   );
 };
@@ -117,35 +117,41 @@ const ComparisonSection = () => {
         </div>
 
         {/* Desktop Table */}
-        <div className="hidden md:block overflow-hidden rounded-lg border border-border">
-          <table className="w-full">
+        <div className="hidden md:block overflow-hidden rounded-xl border border-border shadow-sm">
+          <table className="w-full border-collapse">
             <thead>
-              <tr className="bg-muted">
-                <th className="text-left p-4 font-sans font-semibold text-foreground">Feature</th>
-                <th className="text-center p-4 py-6 font-serif font-bold text-lg text-primary bg-primary/10">Hawaii Vacation Homes</th>
-                <th className="text-center p-4 py-6 font-serif font-bold text-lg text-muted-foreground">MyPerfectStays</th>
+              <tr>
+                <th className="text-left p-5 font-sans font-semibold text-foreground bg-muted border-b border-border">Feature</th>
+                <th className="text-center p-5 py-6 font-serif font-bold text-xl text-primary bg-primary/15 border-b border-primary/20">
+                  Hawaii Vacation Homes
+                </th>
+                <th className="text-center p-5 py-6 font-serif font-bold text-xl text-muted-foreground bg-muted border-b border-border">
+                  MyPerfectStays
+                </th>
               </tr>
             </thead>
             <tbody>
               {comparisonData.map((item, index) => (
                 <tr 
                   key={item.feature} 
-                  className={index % 2 === 0 ? "bg-card" : "bg-muted/50"}
+                  className="group transition-colors hover:bg-muted/30"
                 >
-                  <td className="p-4 font-sans font-medium text-foreground">{item.feature}</td>
-                  <td className={`p-4 ${index % 2 === 0 ? "bg-primary/10" : "bg-primary/15"}`}>
-                    <div className="flex flex-col items-center gap-1">
-                      <StatusIcon status={item.us} />
+                  <td className={`p-5 font-sans font-medium text-foreground border-b border-border/50 ${index % 2 === 1 ? "bg-muted/30" : "bg-card"}`}>
+                    {item.feature}
+                  </td>
+                  <td className={`p-5 border-b border-primary/10 ${index % 2 === 1 ? "bg-primary/15" : "bg-primary/10"}`}>
+                    <div className="flex flex-col items-center gap-2">
+                      <StatusIcon status={item.us} isUs={true} />
                       {item.usNote && (
-                        <span className="text-xs text-muted-foreground text-center">{item.usNote}</span>
+                        <span className="text-sm text-foreground/80 text-center font-medium max-w-[200px]">{item.usNote}</span>
                       )}
                     </div>
                   </td>
-                  <td className="p-4">
-                    <div className="flex flex-col items-center gap-1">
+                  <td className={`p-5 border-b border-border/50 ${index % 2 === 1 ? "bg-muted/30" : "bg-card"}`}>
+                    <div className="flex flex-col items-center gap-2">
                       <StatusIcon status={item.them} />
                       {item.themNote && (
-                        <span className="text-xs text-muted-foreground text-center">{item.themNote}</span>
+                        <span className="text-sm text-muted-foreground text-center max-w-[200px]">{item.themNote}</span>
                       )}
                     </div>
                   </td>
@@ -156,20 +162,20 @@ const ComparisonSection = () => {
         </div>
 
         {/* Mobile Cards */}
-        <div className="md:hidden space-y-4">
+        <div className="md:hidden space-y-3">
           {comparisonData.map((item) => (
-            <div key={item.feature} className="bg-card border border-border rounded-lg p-4">
-              <h3 className="font-sans font-semibold text-foreground mb-3">{item.feature}</h3>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="flex flex-col items-center gap-2 p-3 bg-primary/5 rounded-lg">
-                  <span className="text-xs font-sans font-medium text-primary">Hawaii Vacation Homes</span>
-                  <StatusIcon status={item.us} />
+            <div key={item.feature} className="bg-card border border-border rounded-xl p-4 shadow-sm">
+              <h3 className="font-sans font-semibold text-foreground mb-4 text-center">{item.feature}</h3>
+              <div className="grid grid-cols-2 gap-3">
+                <div className="flex flex-col items-center gap-2 p-4 bg-primary/10 rounded-lg border border-primary/20">
+                  <span className="text-xs font-sans font-bold text-primary uppercase tracking-wide">Hawaii Vacation Homes</span>
+                  <StatusIcon status={item.us} isUs={true} />
                   {item.usNote && (
-                    <span className="text-xs text-muted-foreground text-center">{item.usNote}</span>
+                    <span className="text-xs text-foreground/80 text-center font-medium">{item.usNote}</span>
                   )}
                 </div>
-                <div className="flex flex-col items-center gap-2 p-3 bg-muted/50 rounded-lg">
-                  <span className="text-xs font-sans font-medium text-muted-foreground">MyPerfectStays</span>
+                <div className="flex flex-col items-center gap-2 p-4 bg-muted/50 rounded-lg border border-border">
+                  <span className="text-xs font-sans font-bold text-muted-foreground uppercase tracking-wide">MyPerfectStays</span>
                   <StatusIcon status={item.them} />
                   {item.themNote && (
                     <span className="text-xs text-muted-foreground text-center">{item.themNote}</span>
