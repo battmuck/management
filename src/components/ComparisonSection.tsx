@@ -24,7 +24,6 @@ const comparisonData: ComparisonItem[] = [
     feature: "Guest Marketing & Direct Bookings",
     us: "yes",
     them: "yes",
-    usNote: "Including outreach to past guests",
   },
   {
     feature: "Owner Portal & Reporting",
