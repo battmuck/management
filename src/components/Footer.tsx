@@ -12,7 +12,7 @@ const Footer = () => {
               className="h-24 mb-4 brightness-0 invert opacity-90"
             />
             <p className="text-primary-foreground/70 text-sm font-sans text-center md:text-left max-w-xs">
-              Maui's boutique vacation rental management company. Locally owned & operated.
+              Maui's boutique vacation rental management company.
             </p>
           </div>
           

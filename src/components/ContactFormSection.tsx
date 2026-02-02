@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Phone, Mail, MapPin, CheckCircle } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 const ContactFormSection = () => {
   const { toast } = useToast();
@@ -41,29 +41,6 @@ const ContactFormSection = () => {
               Get a free, no-obligation property evaluation. We'll show you exactly how much more your Maui property could be earning.
             </p>
 
-            <div className="space-y-6 mb-8">
-              <div className="flex items-start gap-4">
-                <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="font-sans font-semibold text-foreground">Free Revenue Analysis</h4>
-                  <p className="text-sm text-muted-foreground">See a detailed projection of your property's earning potential.</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="font-sans font-semibold text-foreground">No Transition Fees</h4>
-                  <p className="text-sm text-muted-foreground">We cover all costs associated with switching from your current manager.</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="font-sans font-semibold text-foreground">90-Day Satisfaction Guarantee</h4>
-                  <p className="text-sm text-muted-foreground">If you're not completely satisfied, you can leave with no penalties.</p>
-                </div>
-              </div>
-            </div>
 
             <div className="space-y-4 border-t border-border pt-8">
               <div className="flex items-center gap-3">
