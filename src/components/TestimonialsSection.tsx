@@ -2,21 +2,15 @@ import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "After two years with MyPerfectStays, I switched to Hawaii Vacation Homes and saw my revenue increase by 22% in the first quarter. The difference in personal attention is night and day.",
-    author: "Sarah M.",
-    property: "Kaanapali Beachfront Villa",
+    quote: "Matt has been an absolute game-changer in managing my short-term rentals over the past five years. His attention to detail, responsiveness, and commitment to guest satisfaction have kept my properties running smoothly and consistently profitable. He handles everything from bookings to maintenance with ease, giving me total peace of mind. I couldn't ask for a more reliable and knowledgeable property manager. Highly recommend Matt to anyone looking for top-tier STR management!",
+    author: "Brandon Turner",
+    property: "Owner, Best-Selling Real Estate Author with Over 1M+ Copies Sold, and the Past Host of BiggerPockets Podcast",
     rating: 5,
   },
   {
-    quote: "I was tired of dealing with call centers and ticket systems. Now I have a direct line to my property manager who actually knows my home. It's the peace of mind I was looking for.",
-    author: "Michael & Jennifer T.",
-    property: "Wailea Luxury Condo",
-    rating: 5,
-  },
-  {
-    quote: "The transition was seamless. They handled everything—my calendar, guest communications, even updated all my photos for free. I wish I had switched sooner.",
-    author: "David K.",
-    property: "Lahaina Oceanview Home",
+    quote: "Matt is naturally gifted at hospitality, guest services and customer support in particular, in such a way that I could never be. He is an incredible human being to boot!",
+    author: "Terry Chen",
+    property: "Owner",
     rating: 5,
   },
 ];
@@ -34,7 +28,7 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <div 
               key={index}
