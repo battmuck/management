@@ -4,7 +4,7 @@ const benefits = [
   {
     icon: TrendingUp,
     title: "Maximize Your Revenue",
-    description: "Our local market expertise and dynamic pricing consistently outperforms national averages by 15-25%.",
+    description: "In 2025, Hawaii Vacation Homes generated an average of 32% higher nightly revenue compared to comparable properties",
   },
   {
     icon: Users,
