@@ -28,7 +28,7 @@ const HeroSection = () => {
         </h1>
         
         <p className="text-lg md:text-xl text-primary-foreground/85 font-sans font-light max-w-2xl mx-auto mb-10 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-          If you're researching MyPerfectStays or comparing Maui property management options, you're in the right place. See how Hawaii Vacation Homes compares when it comes to revenue performance, owner communication, and hands-on local care.
+          If you're researching <strong className="font-semibold">MyPerfectStays</strong> or comparing Maui property management options, you're in the right place. See how <strong className="font-semibold">Hawaii Vacation Homes</strong> compares when it comes to revenue performance, owner communication, and hands-on local care.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: '0.3s' }}>
