@@ -122,7 +122,7 @@ const ComparisonSection = () => {
             <thead>
               <tr className="bg-muted">
                 <th className="text-left p-4 font-sans font-semibold text-foreground">Feature</th>
-                <th className="text-center p-4 font-sans font-semibold text-primary">Hawaii Vacation Homes</th>
+                <th className="text-center p-4 font-sans font-semibold text-primary bg-primary/10">Hawaii Vacation Homes</th>
                 <th className="text-center p-4 font-sans font-semibold text-muted-foreground">MyPerfectStays</th>
               </tr>
             </thead>
@@ -133,7 +133,7 @@ const ComparisonSection = () => {
                   className={index % 2 === 0 ? "bg-card" : "bg-muted/50"}
                 >
                   <td className="p-4 font-sans font-medium text-foreground">{item.feature}</td>
-                  <td className="p-4">
+                  <td className={`p-4 ${index % 2 === 0 ? "bg-primary/10" : "bg-primary/15"}`}>
                     <div className="flex flex-col items-center gap-1">
                       <StatusIcon status={item.us} />
                       {item.usNote && (
