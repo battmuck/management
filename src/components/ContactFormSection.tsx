@@ -36,7 +36,7 @@ const ContactFormSection = () => {
 
           {/* Right Column - Embedded Form */}
           <div className="lg:col-span-3 bg-background rounded-lg p-6 md:p-8 border border-border">
-            <h3 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-0">
+            <h3 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mt-2 mb-2">
               Get a Free Revenue Estimate
             </h3>
             
