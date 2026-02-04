@@ -109,7 +109,7 @@ const ComparisonSection = () => {
       <div className="container-narrow mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-foreground mb-4">
-            How We Compare
+            How We Compare to MyPerfectStays
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground font-sans max-w-2xl mx-auto leading-relaxed">
             An honest, side-by-side look at what you get with Hawaii Vacation Homes versus MyPerfectStays.
