@@ -17,14 +17,14 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="section-padding bg-primary/5">
+    <section className="section-padding bg-gradient-to-br from-primary/10 via-primary/5 to-background">
       <div className="container-narrow mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-foreground mb-4">
             What Owners Are Saying
           </h2>
           <p className="text-lg text-muted-foreground font-sans max-w-2xl mx-auto">
-            Real stories from property owners who made the switch.
+            Real stories from property owners we're proud to work with.
           </p>
         </div>
 
