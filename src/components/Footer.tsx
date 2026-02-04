@@ -1,4 +1,4 @@
-import logoStacked from "@/assets/logo-stacked.png";
+import logoHorizontal from "@/assets/logo-horizontal-light.png";
 import { Phone, Mail, MapPin } from "lucide-react";
 
 const Footer = () => {
@@ -9,9 +9,9 @@ const Footer = () => {
           {/* Left Column - Logo & License */}
           <div className="flex flex-col">
             <img 
-              src={logoStacked} 
+              src={logoHorizontal} 
               alt="Hawaii Vacation Homes" 
-              className="h-40 mb-6 object-contain self-start"
+              className="h-24 md:h-32 mb-6 object-contain self-start"
             />
             <div className="mt-auto">
               <p className="text-foreground font-sans font-medium">
