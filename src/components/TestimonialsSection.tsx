@@ -17,13 +17,13 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="section-padding bg-gradient-to-br from-primary/10 via-primary/5 to-background">
+    <section className="section-padding bg-primary text-primary-foreground">
       <div className="container-narrow mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-primary-foreground mb-4">
             What Owners Are Saying
           </h2>
-          <p className="text-lg text-muted-foreground font-sans max-w-2xl mx-auto">
+          <p className="text-lg text-primary-foreground/80 font-sans max-w-2xl mx-auto">
             Real stories from property owners we're proud to work with.
           </p>
         </div>
@@ -32,25 +32,25 @@ const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <div 
               key={index}
-              className="bg-card rounded-lg p-6 border border-border relative"
+              className="bg-primary-foreground/10 backdrop-blur-sm rounded-lg p-6 border border-primary-foreground/20 relative"
             >
-              <Quote className="absolute top-4 right-4 w-8 h-8 text-primary/20" />
+              <Quote className="absolute top-4 right-4 w-8 h-8 text-primary-foreground/30" />
               
               <div className="flex gap-1 mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                  <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                 ))}
               </div>
               
-              <p className="text-foreground font-sans text-sm leading-relaxed mb-6 italic">
+              <p className="text-primary-foreground font-sans text-sm leading-relaxed mb-6 italic">
                 "{testimonial.quote}"
               </p>
               
-              <div className="border-t border-border pt-4">
-                <p className="font-sans font-semibold text-foreground text-sm">
+              <div className="border-t border-primary-foreground/20 pt-4">
+                <p className="font-sans font-semibold text-primary-foreground text-sm">
                   {testimonial.author}
                 </p>
-                <p className="font-sans text-xs text-muted-foreground">
+                <p className="font-sans text-xs text-primary-foreground/70">
                   {testimonial.property}
                 </p>
               </div>
