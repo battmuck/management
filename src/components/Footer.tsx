@@ -52,9 +52,10 @@ const Footer = () => {
             {/* Social Icons */}
             <div className="flex gap-3 mt-6">
               <a 
-                href="https://facebook.com" 
+                href="https://www.facebook.com/HawaiiVacationHomes" 
                 target="_blank" 
                 rel="noopener noreferrer"
+                aria-label="Follow us on Facebook"
                 className="w-10 h-10 rounded-md bg-primary flex items-center justify-center hover:bg-primary/80 transition-colors"
               >
                 <svg className="w-5 h-5 text-primary-foreground" fill="currentColor" viewBox="0 0 24 24">
@@ -62,9 +63,10 @@ const Footer = () => {
                 </svg>
               </a>
               <a 
-                href="https://instagram.com" 
+                href="https://www.instagram.com/hawaiivacationhomes" 
                 target="_blank" 
                 rel="noopener noreferrer"
+                aria-label="Follow us on Instagram"
                 className="w-10 h-10 rounded-md bg-primary flex items-center justify-center hover:bg-primary/80 transition-colors"
               >
                 <svg className="w-5 h-5 text-primary-foreground" fill="currentColor" viewBox="0 0 24 24">

@@ -53,12 +53,12 @@ const HeroSection = () => {
               className="font-sans font-medium text-base px-8 py-6 bg-card/10 border-primary-foreground/30 text-primary-foreground hover:bg-card/20 hover:text-primary-foreground animate-fade-in"
               style={{ animationDelay: '0.3s' }}
             >
-              See The Comparison
+              See Why Owners Switch
             </Button>
           </div>
 
           {/* Right Column - Form */}
-          <div className="bg-background/95 backdrop-blur-sm rounded-lg p-4 md:p-5 shadow-2xl animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <div className="bg-background/95 backdrop-blur-sm rounded-lg p-4 md:p-5 shadow-2xl animate-fade-in min-h-[500px] md:min-h-[550px]" style={{ animationDelay: '0.2s' }}>
             <h2 className="text-2xl md:text-3xl font-serif font-semibold text-foreground mt-1 mb-1 text-center">
               Get a Free Revenue Estimate
             </h2>
@@ -68,7 +68,7 @@ const HeroSection = () => {
             
             <iframe
               src="https://api.leadconnectorhq.com/widget/form/NIkdCb3EJxwZ7DtCplGq"
-              style={{ width: "100%", height: "100%", border: "none", borderRadius: "3px" }}
+              style={{ width: "100%", height: "100%", minHeight: "450px", border: "none", borderRadius: "3px" }}
               id="inline-NIkdCb3EJxwZ7DtCplGq"
               data-layout="{'id':'INLINE'}"
               data-trigger-type="alwaysShow"
