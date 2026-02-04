@@ -1,4 +1,4 @@
-import { TrendingUp, Users, Shield, Home, Clock, Award } from "lucide-react";
+import { TrendingUp, Users, Shield, DollarSign, Clock, Award } from "lucide-react";
 
 const benefits = [
   {
@@ -17,7 +17,7 @@ const benefits = [
     description: "One simple management fee. No surprise charges for photography, marketing, or markups.",
   },
   {
-    icon: Home,
+    icon: DollarSign,
     title: "Higher Revenue Performance",
     description: "In 2025, we drove 32% higher RevPAR (revenue per available night) than the market across listings we manage.",
   },
