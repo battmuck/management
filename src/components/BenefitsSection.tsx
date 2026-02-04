@@ -14,17 +14,17 @@ const benefits = [
   {
     icon: Shield,
     title: "Complete Transparency",
-    description: "One simple management fee. No surprise charges for photography, marketing, or maintenance coordination.",
+    description: "One simple management fee. No surprise charges for photography, marketing, or markups.",
   },
   {
     icon: Home,
     title: "Property Protection",
-    description: "Weekly in-person inspections ensure your home is treated with the respect it deserves.",
+    description: "Proactive maintenance keeps your home in top condition and protects your investment.",
   },
   {
     icon: Clock,
     title: "Seamless Transition",
-    description: "We handle everything—calendar migration, guest communication, and listing optimization.",
+    description: "We'll guide you through every step—from calendar migration to listing optimization.",
   },
   {
     icon: Award,
