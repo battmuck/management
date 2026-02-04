@@ -33,8 +33,8 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Column - Text */}
           <div className="text-center lg:text-left">
-            <p className="text-primary-foreground/90 font-sans text-sm md:text-base tracking-widest uppercase mb-4 animate-fade-in">
-              Hawaii Vacation Homes vs MyPerfectStays
+            <p className="text-primary-foreground font-sans text-base md:text-lg lg:text-xl font-medium tracking-wide uppercase mb-4 animate-fade-in">
+              MyPerfectStays vs Hawaii Vacation Homes
             </p>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-primary-foreground mb-6 leading-tight animate-fade-in" style={{ animationDelay: '0.1s' }}>
