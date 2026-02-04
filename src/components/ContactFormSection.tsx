@@ -36,13 +36,13 @@ const ContactFormSection = () => {
 
           {/* Right Column - Embedded Form */}
           <div className="bg-background rounded-lg p-6 md:p-8 border border-border">
-            <h3 className="text-2xl font-serif font-semibold text-foreground mb-2">
-              Get Your Free Evaluation
+            <h3 className="text-2xl font-serif font-semibold text-foreground mb-0">
+              Get a Free Revenue Estimate
             </h3>
             
             <iframe
               src="https://api.leadconnectorhq.com/widget/form/NIkdCb3EJxwZ7DtCplGq"
-              style={{ width: "100%", height: "578px", border: "none", borderRadius: "3px" }}
+              style={{ width: "100%", height: "544px", border: "none", borderRadius: "3px" }}
               id="inline-NIkdCb3EJxwZ7DtCplGq"
               data-layout="{'id':'INLINE'}"
               data-trigger-type="alwaysShow"
@@ -52,7 +52,7 @@ const ContactFormSection = () => {
               data-deactivation-type="neverDeactivate"
               data-deactivation-value=""
               data-form-name="Property Management - Competitor Form"
-              data-height="578"
+              data-height="544"
               data-layout-iframe-id="inline-NIkdCb3EJxwZ7DtCplGq"
               data-form-id="NIkdCb3EJxwZ7DtCplGq"
               title="Property Management - Competitor Form"
