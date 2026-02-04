@@ -8,8 +8,8 @@ const benefits = [
   },
   {
     icon: Users,
-    title: "Personal Relationship",
-    description: "You'll know your property manager by name. No ticket systems—just real people who care.",
+    title: "Boutique Management",
+    description: "Every owner, guest, and listing receives personalized attention—not a one-size-fits-all approach.",
   },
   {
     icon: Shield,
@@ -23,8 +23,8 @@ const benefits = [
   },
   {
     icon: Clock,
-    title: "Seamless Transition",
-    description: "We'll guide you through every step—from calendar migration to listing optimization.",
+    title: "100% Owner Retention",
+    description: "Our owners stay because we deliver results. Not a single owner has left since we started.",
   },
   {
     icon: Award,
