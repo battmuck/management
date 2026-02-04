@@ -19,7 +19,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center pt-20 pb-16">
+    <section className="relative min-h-screen flex items-center pt-24 md:pt-28 pb-16">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
