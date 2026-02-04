@@ -59,10 +59,10 @@ const HeroSection = () => {
 
           {/* Right Column - Form */}
           <div className="bg-background/95 backdrop-blur-sm rounded-lg p-6 md:p-8 shadow-2xl animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <h2 className="text-2xl md:text-3xl font-serif font-semibold text-foreground mb-1 text-center">
+            <h2 className="text-2xl md:text-3xl font-serif font-semibold text-foreground mb-0 text-center">
               Get a Free Revenue Estimate
             </h2>
-            <p className="text-muted-foreground font-sans text-sm mb-4 text-center">
+            <p className="text-muted-foreground font-sans text-sm mb-1 text-center">
               See how much more your property could earn
             </p>
             
