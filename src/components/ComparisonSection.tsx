@@ -1,4 +1,5 @@
 import { Check, X, Minus } from "lucide-react";
+import { CompetitorConfig } from "@/config/competitors";
 
 interface ComparisonItem {
   feature: string;
@@ -6,6 +7,10 @@ interface ComparisonItem {
   them: "yes" | "no" | "partial";
   usNote?: string;
   themNote?: string;
+}
+
+interface ComparisonSectionProps {
+  competitor?: CompetitorConfig;
 }
 
 const comparisonData: ComparisonItem[] = [
@@ -102,16 +107,18 @@ const StatusIcon = ({ status, isUs = false }: { status: "yes" | "no" | "partial"
   );
 };
 
-const ComparisonSection = () => {
+const ComparisonSection = ({ competitor }: ComparisonSectionProps) => {
+  const competitorName = competitor?.name || "MyPerfectStays";
+  
   return (
     <section id="comparison" className="section-padding bg-card">
       <div className="container-narrow mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-foreground mb-4">
-            How We Compare to MyPerfectStays
+            How We Compare to {competitorName}
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground font-sans max-w-2xl mx-auto leading-relaxed">
-            A side-by-side look at what you get with Hawaii Vacation Homes versus MyPerfectStays.
+            A side-by-side look at what you get with Hawaii Vacation Homes versus {competitorName}.
           </p>
         </div>
 
@@ -125,7 +132,7 @@ const ComparisonSection = () => {
                   Hawaii Vacation Homes
                 </th>
                 <th className="text-center p-5 py-6 font-serif font-bold text-xl text-muted-foreground bg-muted border-b border-border">
-                  MyPerfectStays
+                  {competitorName}
                 </th>
               </tr>
             </thead>
@@ -174,7 +181,7 @@ const ComparisonSection = () => {
                   )}
                 </div>
                 <div className="flex flex-col items-center gap-2 p-4 bg-muted/50 rounded-lg border border-border">
-                  <span className="text-xs font-sans font-bold text-muted-foreground uppercase tracking-wide">MyPerfectStays</span>
+                  <span className="text-xs font-sans font-bold text-muted-foreground uppercase tracking-wide">{competitorName}</span>
                   <StatusIcon status={item.them} />
                   {item.themNote && (
                     <span className="text-xs text-muted-foreground text-center">{item.themNote}</span>
