@@ -122,7 +122,7 @@ const ComparisonSection = () => {
             <thead>
               <tr>
                 <th className="text-left p-5 font-sans font-semibold text-foreground bg-muted border-b border-border">Feature</th>
-                <th className="text-center p-5 py-6 font-serif font-bold text-xl text-primary-foreground bg-primary border-b border-primary/80">
+                <th className="text-center p-5 py-6 font-serif font-bold text-xl text-primary-foreground bg-primary/90 border-b border-primary">
                   Hawaii Vacation Homes
                 </th>
                 <th className="text-center p-5 py-6 font-serif font-bold text-xl text-muted-foreground bg-muted border-b border-border">
