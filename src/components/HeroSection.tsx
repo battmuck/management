@@ -68,8 +68,8 @@ const HeroSection = () => {
             
             <iframe
               src="https://api.leadconnectorhq.com/widget/form/NIkdCb3EJxwZ7DtCplGq"
-              style={{ width: "100%", minHeight: "520px", border: "none", borderRadius: "3px" }}
-              id="hero-inline-NIkdCb3EJxwZ7DtCplGq"
+              style={{ width: "100%", height: "593px", border: "none", borderRadius: "3px" }}
+              id="inline-NIkdCb3EJxwZ7DtCplGq"
               data-layout="{'id':'INLINE'}"
               data-trigger-type="alwaysShow"
               data-trigger-value=""
@@ -78,8 +78,8 @@ const HeroSection = () => {
               data-deactivation-type="neverDeactivate"
               data-deactivation-value=""
               data-form-name="Property Management - Competitor Form"
-              data-height="520"
-              data-layout-iframe-id="hero-inline-NIkdCb3EJxwZ7DtCplGq"
+              data-height="593"
+              data-layout-iframe-id="inline-NIkdCb3EJxwZ7DtCplGq"
               data-form-id="NIkdCb3EJxwZ7DtCplGq"
               title="Property Management - Competitor Form"
               scrolling="no"
