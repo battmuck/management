@@ -19,10 +19,10 @@ const ContactFormSection = () => {
 
   return (
     <section id="contact-form" className="section-padding bg-card">
-      <div className="container-narrow mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-5 gap-12 items-start">
           {/* Left Column - Info */}
-          <div>
+          <div className="lg:col-span-2">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-foreground mb-4">
               Ready to Maximize Your Rental Income?
             </h2>
@@ -35,7 +35,7 @@ const ContactFormSection = () => {
           </div>
 
           {/* Right Column - Embedded Form */}
-          <div className="bg-background rounded-lg p-6 md:p-8 border border-border">
+          <div className="lg:col-span-3 bg-background rounded-lg p-6 md:p-8 border border-border">
             <h3 className="text-2xl font-serif font-semibold text-foreground mb-0">
               Get a Free Revenue Estimate
             </h3>
