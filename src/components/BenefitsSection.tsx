@@ -18,8 +18,8 @@ const benefits = [
   },
   {
     icon: Home,
-    title: "Property Protection",
-    description: "Proactive maintenance keeps your home in top condition and protects your investment.",
+    title: "Higher Revenue Performance",
+    description: "In 2025, we drove 32% higher RevPAR (revenue per available night) than the market across listings we manage.",
   },
   {
     icon: Clock,
