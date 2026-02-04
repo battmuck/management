@@ -39,7 +39,7 @@ const BenefitsSection = () => {
       <div className="container-narrow mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-foreground mb-4">
-            Why Owners Switch to Us
+            Why Owners Work With Us
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground font-sans max-w-2xl mx-auto leading-relaxed">
             When you partner with Hawaii Vacation Homes, you get the benefits of boutique management with the performance of a market leader.
