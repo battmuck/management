@@ -53,11 +53,12 @@ const HeroSection = ({ competitor }: HeroSectionProps) => {
               If you're researching <strong className="font-semibold">{competitorName}</strong> or comparing Maui property management options, you're in the right place.
             </p>
 
+            {/* Button - hidden on mobile, shown on lg+ */}
             <Button 
               variant="outline" 
               size="lg"
               onClick={() => document.getElementById('comparison')?.scrollIntoView({ behavior: 'smooth' })}
-              className="font-sans font-medium text-base px-8 py-6 bg-card/10 border-primary-foreground/30 text-primary-foreground hover:bg-card/20 hover:text-primary-foreground animate-fade-in"
+              className="hidden lg:inline-flex font-sans font-medium text-base px-8 py-6 bg-card/10 border-primary-foreground/30 text-primary-foreground hover:bg-card/20 hover:text-primary-foreground animate-fade-in"
               style={{ animationDelay: '0.3s' }}
             >
               See Why Owners Switch
@@ -91,6 +92,18 @@ const HeroSection = ({ competitor }: HeroSectionProps) => {
               title="Property Management - Competitor Form"
               scrolling="no"
             />
+          </div>
+
+          {/* Button - shown on mobile only, below form */}
+          <div className="lg:hidden flex justify-center animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            <Button 
+              variant="outline" 
+              size="lg"
+              onClick={() => document.getElementById('comparison')?.scrollIntoView({ behavior: 'smooth' })}
+              className="font-sans font-medium text-base px-8 py-6 bg-card/10 border-primary-foreground/30 text-primary-foreground hover:bg-card/20 hover:text-primary-foreground"
+            >
+              See Why Owners Switch
+            </Button>
           </div>
         </div>
       </div>
