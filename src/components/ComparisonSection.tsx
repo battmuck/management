@@ -84,8 +84,8 @@ const comparisonData: ComparisonItem[] = [
 const StatusIcon = ({ status, isUs = false }: { status: "yes" | "no" | "partial"; isUs?: boolean }) => {
   if (status === "yes") {
     return (
-      <div className={`w-10 h-10 rounded-full flex items-center justify-center ${isUs ? "bg-primary/30" : "bg-primary/20"}`}>
-        <Check className={`w-6 h-6 ${isUs ? "text-primary" : "text-primary/80"}`} strokeWidth={3} />
+      <div className={`w-10 h-10 rounded-full flex items-center justify-center ${isUs ? "bg-primary-foreground/20" : "bg-primary/20"}`}>
+        <Check className={`w-6 h-6 ${isUs ? "text-primary-foreground" : "text-primary/80"}`} strokeWidth={3} />
       </div>
     );
   }
@@ -112,7 +112,7 @@ const ComparisonSection = () => {
             How We Compare to MyPerfectStays
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground font-sans max-w-2xl mx-auto leading-relaxed">
-            An honest, side-by-side look at what you get with Hawaii Vacation Homes versus MyPerfectStays.
+            A side-by-side look at what you get with Hawaii Vacation Homes versus MyPerfectStays.
           </p>
         </div>
 
@@ -122,7 +122,7 @@ const ComparisonSection = () => {
             <thead>
               <tr>
                 <th className="text-left p-5 font-sans font-semibold text-foreground bg-muted border-b border-border">Feature</th>
-                <th className="text-center p-5 py-6 font-serif font-bold text-xl text-primary bg-primary/15 border-b border-primary/20">
+                <th className="text-center p-5 py-6 font-serif font-bold text-xl text-primary-foreground bg-primary border-b border-primary/80">
                   Hawaii Vacation Homes
                 </th>
                 <th className="text-center p-5 py-6 font-serif font-bold text-xl text-muted-foreground bg-muted border-b border-border">
@@ -139,11 +139,11 @@ const ComparisonSection = () => {
                   <td className={`p-5 font-sans font-medium text-foreground border-b border-border/50 ${index % 2 === 1 ? "bg-muted/30" : "bg-card"}`}>
                     {item.feature}
                   </td>
-                  <td className={`p-5 border-b border-primary/10 ${index % 2 === 1 ? "bg-primary/15" : "bg-primary/10"}`}>
+                  <td className={`p-5 bg-primary ${index % 2 === 1 ? "bg-primary/90" : ""} border-b border-primary/60`}>
                     <div className="flex flex-col items-center gap-2">
                       <StatusIcon status={item.us} isUs={true} />
                       {item.usNote && (
-                        <span className="text-sm text-foreground/90 text-center font-medium max-w-[220px] leading-snug">{item.usNote}</span>
+                        <span className="text-sm text-primary-foreground text-center font-medium max-w-[220px] leading-snug">{item.usNote}</span>
                       )}
                     </div>
                   </td>
@@ -167,11 +167,11 @@ const ComparisonSection = () => {
             <div key={item.feature} className="bg-card border border-border rounded-xl p-4 shadow-sm">
               <h3 className="font-sans font-semibold text-foreground mb-4 text-center">{item.feature}</h3>
               <div className="grid grid-cols-2 gap-3">
-                <div className="flex flex-col items-center gap-2 p-4 bg-primary/10 rounded-lg border border-primary/20">
-                  <span className="text-xs font-sans font-bold text-primary uppercase tracking-wide">Hawaii Vacation Homes</span>
+                <div className="flex flex-col items-center gap-2 p-4 bg-primary rounded-lg border border-primary/80">
+                  <span className="text-xs font-sans font-bold text-primary-foreground uppercase tracking-wide">Hawaii Vacation Homes</span>
                   <StatusIcon status={item.us} isUs={true} />
                   {item.usNote && (
-                    <span className="text-xs text-foreground/80 text-center font-medium">{item.usNote}</span>
+                    <span className="text-xs text-primary-foreground/90 text-center font-medium">{item.usNote}</span>
                   )}
                 </div>
                 <div className="flex flex-col items-center gap-2 p-4 bg-muted/50 rounded-lg border border-border">
