@@ -24,7 +24,7 @@ const ContactFormSection = () => {
         <div className="bg-background rounded-lg p-6 md:p-8 border border-border">
           <iframe
             src="https://api.leadconnectorhq.com/widget/form/NIkdCb3EJxwZ7DtCplGq"
-            style={{ width: "100%", minHeight: "600px", border: "none", borderRadius: "3px" }}
+            style={{ width: "100%", height: "593px", border: "none", borderRadius: "3px" }}
             id="bottom-inline-NIkdCb3EJxwZ7DtCplGq"
             data-layout="{'id':'INLINE'}"
             data-trigger-type="alwaysShow"
@@ -34,7 +34,7 @@ const ContactFormSection = () => {
             data-deactivation-type="neverDeactivate"
             data-deactivation-value=""
             data-form-name="Property Management - Competitor Form"
-            data-height="600"
+            data-height="593"
             data-layout-iframe-id="bottom-inline-NIkdCb3EJxwZ7DtCplGq"
             data-form-id="NIkdCb3EJxwZ7DtCplGq"
             title="Property Management - Competitor Form"
