@@ -13,7 +13,6 @@ const comparisonData: ComparisonItem[] = [
     feature: "Multi-Channel Marketing",
     us: "yes",
     them: "yes",
-    usNote: "Across Airbnb, Vrbo, Booking.com, and all major channels",
   },
   {
     feature: "Revenue Management & Dynamic Pricing",
