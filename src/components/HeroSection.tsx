@@ -1,8 +1,15 @@
 import { useEffect } from "react";
 import heroImage from "@/assets/hero-maui.jpg";
 import { Button } from "@/components/ui/button";
+import { CompetitorConfig } from "@/config/competitors";
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  competitor?: CompetitorConfig;
+}
+
+const HeroSection = ({ competitor }: HeroSectionProps) => {
+  const competitorName = competitor?.name || "MyPerfectStays";
+  const tagline = competitor?.tagline || `${competitorName} vs Hawaii Vacation Homes`;
   useEffect(() => {
     // Load the form embed script
     const script = document.createElement("script");
@@ -34,16 +41,16 @@ const HeroSection = () => {
           {/* Left Column - Text */}
           <div className="text-center lg:text-left">
             <p className="text-primary-foreground font-sans text-base md:text-lg lg:text-xl font-medium tracking-wide uppercase mb-4 animate-fade-in">
-              MyPerfectStays vs Hawaii Vacation Homes
+              {tagline}
             </p>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-primary-foreground mb-6 leading-tight animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              Choosing the Right{" "}
-              <span className="text-primary drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">Maui Property Manager?</span>
+              {competitor?.heroHeadline || "Choosing the Right"}{" "}
+              <span className="text-primary drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">{competitor?.heroSubheadline || "Maui Property Manager?"}</span>
             </h1>
             
             <p className="text-lg md:text-xl text-primary-foreground/85 font-sans font-light max-w-xl mx-auto lg:mx-0 mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              If you're researching <strong className="font-semibold">MyPerfectStays</strong> or comparing Maui property management options, you're in the right place.
+              If you're researching <strong className="font-semibold">{competitorName}</strong> or comparing Maui property management options, you're in the right place.
             </p>
 
             <Button 
