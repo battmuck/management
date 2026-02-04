@@ -28,18 +28,18 @@ const ContactFormSection = () => {
   };
 
   return (
-    <section id="contact-form" className="section-padding bg-card">
+    <section id="contact-form" className="section-padding bg-primary text-primary-foreground">
       <div className="container-narrow mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Info */}
           <div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-primary-foreground mb-4">
               Ready to Maximize Your Rental Income?
             </h2>
-            <p className="text-lg text-muted-foreground font-sans mb-6">
+            <p className="text-lg text-primary-foreground/80 font-sans mb-6">
               Get a free, no-obligation property evaluation. We'll show you exactly how much more your Maui property could be earning.
             </p>
-            <p className="text-muted-foreground font-sans text-sm">
+            <p className="text-primary-foreground/70 font-sans text-sm">
               Fill out the form and our team will reach out within 24 hours to discuss your property's potential.
             </p>
           </div>
