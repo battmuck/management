@@ -24,7 +24,7 @@ const ContactFormSection = () => {
         <div className="bg-background rounded-lg p-6 md:p-8 border border-border">
           <iframe
             src="https://api.leadconnectorhq.com/widget/form/NIkdCb3EJxwZ7DtCplGq"
-            style={{ width: "100%", height: "593px", border: "none", borderRadius: "3px" }}
+            style={{ width: "100%", height: "100%", border: "none", borderRadius: "3px" }}
             id="bottom-inline-NIkdCb3EJxwZ7DtCplGq"
             data-layout="{'id':'INLINE'}"
             data-trigger-type="alwaysShow"
