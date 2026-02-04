@@ -1,31 +1,21 @@
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
+import { useEffect } from "react";
 
 const ContactFormSection = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    propertyAddress: "",
-    message: "",
-  });
+  useEffect(() => {
+    // Load the form embed script
+    const script = document.createElement("script");
+    script.src = "https://link.msgsndr.com/js/form_embed.js";
+    script.async = true;
+    document.body.appendChild(script);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "Thank you for your interest!",
-      description: "Our team will contact you within 24 hours to schedule your free property evaluation.",
-    });
-    setFormData({ name: "", email: "", phone: "", propertyAddress: "", message: "" });
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+    return () => {
+      // Cleanup script on unmount
+      const existingScript = document.querySelector('script[src="https://link.msgsndr.com/js/form_embed.js"]');
+      if (existingScript) {
+        existingScript.remove();
+      }
+    };
+  }, []);
 
   return (
     <section id="contact-form" className="section-padding bg-card">
@@ -44,101 +34,29 @@ const ContactFormSection = () => {
             </p>
           </div>
 
-          {/* Right Column - Form */}
+          {/* Right Column - Embedded Form */}
           <div className="bg-background rounded-lg p-6 md:p-8 border border-border">
             <h3 className="text-2xl font-serif font-semibold text-foreground mb-6">
               Get Your Free Evaluation
             </h3>
             
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <label htmlFor="name" className="block text-sm font-sans font-medium text-foreground mb-1">
-                  Full Name *
-                </label>
-                <Input
-                  id="name"
-                  name="name"
-                  type="text"
-                  required
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder="John Smith"
-                  className="font-sans"
-                />
-              </div>
-              
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="email" className="block text-sm font-sans font-medium text-foreground mb-1">
-                    Email *
-                  </label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="john@example.com"
-                    className="font-sans"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-sans font-medium text-foreground mb-1">
-                    Phone
-                  </label>
-                  <Input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    placeholder="(808) 555-0000"
-                    className="font-sans"
-                  />
-                </div>
-              </div>
-              
-              <div>
-                <label htmlFor="propertyAddress" className="block text-sm font-sans font-medium text-foreground mb-1">
-                  Property Address *
-                </label>
-                <Input
-                  id="propertyAddress"
-                  name="propertyAddress"
-                  type="text"
-                  required
-                  value={formData.propertyAddress}
-                  onChange={handleChange}
-                  placeholder="123 Beach Road, Lahaina, HI"
-                  className="font-sans"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm font-sans font-medium text-foreground mb-1">
-                  Tell us about your property (optional)
-                </label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  rows={3}
-                  value={formData.message}
-                  onChange={handleChange}
-                  placeholder="Number of bedrooms, current management situation, etc."
-                  className="font-sans"
-                />
-              </div>
-              
-              <Button type="submit" size="lg" className="w-full font-sans font-medium">
-                Request Free Evaluation
-              </Button>
-              
-              <p className="text-xs text-muted-foreground text-center font-sans">
-                By submitting this form, you agree to receive communications from Hawaii Vacation Homes. 
-                We respect your privacy and will never share your information.
-              </p>
-            </form>
+            <iframe
+              src="https://api.leadconnectorhq.com/widget/form/NIkdCb3EJxwZ7DtCplGq"
+              style={{ width: "100%", height: "578px", border: "none", borderRadius: "3px" }}
+              id="inline-NIkdCb3EJxwZ7DtCplGq"
+              data-layout="{'id':'INLINE'}"
+              data-trigger-type="alwaysShow"
+              data-trigger-value=""
+              data-activation-type="alwaysActivated"
+              data-activation-value=""
+              data-deactivation-type="neverDeactivate"
+              data-deactivation-value=""
+              data-form-name="Property Management - Competitor Form"
+              data-height="578"
+              data-layout-iframe-id="inline-NIkdCb3EJxwZ7DtCplGq"
+              data-form-id="NIkdCb3EJxwZ7DtCplGq"
+              title="Property Management - Competitor Form"
+            />
           </div>
         </div>
       </div>
