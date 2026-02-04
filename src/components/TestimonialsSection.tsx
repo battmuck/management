@@ -32,25 +32,25 @@ const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <div 
               key={index}
-              className="bg-primary-foreground/10 backdrop-blur-sm rounded-lg p-6 border border-primary-foreground/20 relative"
+              className="bg-background rounded-lg p-6 shadow-lg relative"
             >
-              <Quote className="absolute top-4 right-4 w-8 h-8 text-primary-foreground/30" />
+              <Quote className="absolute top-4 right-4 w-8 h-8 text-primary/20" />
               
               <div className="flex gap-1 mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  <Star key={i} className="w-4 h-4 fill-primary text-primary" />
                 ))}
               </div>
               
-              <p className="text-primary-foreground font-sans text-sm leading-relaxed mb-6 italic">
+              <p className="text-foreground font-sans text-sm leading-relaxed mb-6 italic">
                 "{testimonial.quote}"
               </p>
               
-              <div className="border-t border-primary-foreground/20 pt-4">
-                <p className="font-sans font-semibold text-primary-foreground text-sm">
+              <div className="border-t border-border pt-4">
+                <p className="font-sans font-semibold text-foreground text-sm">
                   {testimonial.author}
                 </p>
-                <p className="font-sans text-xs text-primary-foreground/70">
+                <p className="font-sans text-xs text-muted-foreground">
                   {testimonial.property}
                 </p>
               </div>
