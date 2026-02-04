@@ -23,7 +23,7 @@ const TestimonialsSection = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-primary-foreground mb-4">
             What Owners Are Saying
           </h2>
-          <p className="text-lg text-primary-foreground/80 font-sans max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-primary-foreground/85 font-sans max-w-2xl mx-auto leading-relaxed">
             Real stories from property owners we're proud to work with.
           </p>
         </div>
@@ -42,15 +42,15 @@ const TestimonialsSection = () => {
                 ))}
               </div>
               
-              <p className="text-foreground font-sans text-base leading-relaxed mb-6 italic">
+              <p className="text-foreground font-sans text-base md:text-lg leading-relaxed mb-6 italic">
                 "{testimonial.quote}"
               </p>
               
               <div className="border-t border-border pt-4">
-                <p className="font-sans font-semibold text-foreground text-sm">
+                <p className="font-sans font-semibold text-foreground text-base">
                   {testimonial.author}
                 </p>
-                <p className="font-sans text-xs text-muted-foreground">
+                <p className="font-sans text-sm text-muted-foreground">
                   {testimonial.property}
                 </p>
               </div>

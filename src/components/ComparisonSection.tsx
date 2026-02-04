@@ -111,7 +111,7 @@ const ComparisonSection = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-foreground mb-4">
             How We Compare
           </h2>
-          <p className="text-lg text-muted-foreground font-sans max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-muted-foreground font-sans max-w-2xl mx-auto leading-relaxed">
             An honest, side-by-side look at what you get with Hawaii Vacation Homes versus MyPerfectStays.
           </p>
         </div>
@@ -143,7 +143,7 @@ const ComparisonSection = () => {
                     <div className="flex flex-col items-center gap-2">
                       <StatusIcon status={item.us} isUs={true} />
                       {item.usNote && (
-                        <span className="text-sm text-foreground/80 text-center font-medium max-w-[200px]">{item.usNote}</span>
+                        <span className="text-sm text-foreground/90 text-center font-medium max-w-[220px] leading-snug">{item.usNote}</span>
                       )}
                     </div>
                   </td>
@@ -151,7 +151,7 @@ const ComparisonSection = () => {
                     <div className="flex flex-col items-center gap-2">
                       <StatusIcon status={item.them} />
                       {item.themNote && (
-                        <span className="text-sm text-muted-foreground text-center max-w-[200px]">{item.themNote}</span>
+                        <span className="text-sm text-muted-foreground text-center max-w-[220px] leading-snug">{item.themNote}</span>
                       )}
                     </div>
                   </td>

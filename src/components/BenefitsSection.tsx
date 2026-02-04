@@ -41,7 +41,7 @@ const BenefitsSection = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-foreground mb-4">
             Why Owners Switch to Us
           </h2>
-          <p className="text-lg text-muted-foreground font-sans max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-muted-foreground font-sans max-w-2xl mx-auto leading-relaxed">
             When you partner with Hawaii Vacation Homes, you get the benefits of boutique management with the performance of a market leader.
           </p>
         </div>
@@ -58,7 +58,7 @@ const BenefitsSection = () => {
               <h3 className="text-xl font-serif font-semibold text-foreground mb-2">
                 {benefit.title}
               </h3>
-              <p className="text-muted-foreground font-sans text-sm leading-relaxed">
+              <p className="text-muted-foreground font-sans text-base leading-relaxed">
                 {benefit.description}
               </p>
             </div>
