@@ -6,6 +6,7 @@ import HeroSection from "@/components/HeroSection";
 import ComparisonSection from "@/components/ComparisonSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import GuestReviewsSection from "@/components/GuestReviewsSection";
 import ContactFormSection from "@/components/ContactFormSection";
 import Footer from "@/components/Footer";
 
@@ -48,6 +49,7 @@ const CompetitorPage = () => {
         <ComparisonSection competitor={competitor} />
         <BenefitsSection />
         <TestimonialsSection />
+        <GuestReviewsSection />
         <ContactFormSection />
       </main>
       <Footer />
