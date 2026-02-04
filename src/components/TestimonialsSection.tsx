@@ -42,7 +42,7 @@ const TestimonialsSection = () => {
                 ))}
               </div>
               
-              <p className="text-foreground font-sans text-sm leading-relaxed mb-6 italic">
+              <p className="text-foreground font-sans text-base leading-relaxed mb-6 italic">
                 "{testimonial.quote}"
               </p>
               
