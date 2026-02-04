@@ -38,8 +38,8 @@ const HeroSection = () => {
             </p>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-primary-foreground mb-6 leading-tight animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              Choosing the Right<br />
-              <span className="text-primary drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">Maui Property Manager?</span>
+              Choosing the Right Maui<br />
+              <span className="text-primary drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">Property Manager?</span>
             </h1>
             
             <p className="text-lg md:text-xl text-primary-foreground/85 font-sans font-light max-w-xl mx-auto lg:mx-0 mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
