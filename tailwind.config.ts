@@ -53,6 +53,8 @@ export default {
         },
         success: "hsl(var(--success))",
         warning: "hsl(var(--warning))",
+        gold: "hsl(var(--gold))",
+        "card-alt": "hsl(var(--card-alt))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
