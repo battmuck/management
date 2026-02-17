@@ -43,6 +43,8 @@
     --hero-overlay: 173 27% 20%;
     --success: 142 71% 45%;
     --warning: 38 92% 50%;
+    --gold: 43 94% 52%;
+    --card-alt: 210 18% 94%;
     
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -82,6 +84,8 @@
     --border: 173 20% 25%;
     --input: 173 20% 25%;
     --ring: 173 27% 46%;
+    --gold: 43 90% 45%;
+    --card-alt: 210 15% 20%;
     
     --sidebar-background: 173 27% 10%;
     --sidebar-foreground: 30 43% 97%;
