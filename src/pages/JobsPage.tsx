@@ -86,13 +86,17 @@ const requirements = [
 const JobsPage = () => {
   useEffect(() => {
     document.title = "On-Site Property Coordinator | Hawaii Vacation Homes";
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) {
-      meta.setAttribute(
-        "content",
-        "Join Hawaii Vacation Homes as an On-Site Property Coordinator in Kihei, Maui. Part-time 1099 contractor role, $25–$30/hr."
-      );
-    }
+    const description = "Join Hawaii Vacation Homes as an On-Site Property Coordinator in Kihei, Maui. Part-time 1099 contractor role, $25–$30/hr.";
+
+    const setMeta = (selector: string, attr: string, value: string) => {
+      const el = document.querySelector(selector);
+      if (el) el.setAttribute(attr, value);
+    };
+
+    setMeta('meta[name="description"]', "content", description);
+    setMeta('meta[property="og:title"]', "content", "We're Hiring: On-Site Property Coordinator | Hawaii Vacation Homes");
+    setMeta('meta[property="og:description"]', "content", description);
+    setMeta('meta[property="og:image"]', "content", `${window.location.origin}/jobs-og-image.jpg`);
   }, []);
 
   return (
