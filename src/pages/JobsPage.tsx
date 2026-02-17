@@ -16,36 +16,36 @@ const responsibilities = [
   {
     title: "Property Onboarding",
     items: [
-      "Collect, document, and organize information for new properties",
-      "Support property setup and guest-readiness",
+      "Collect, document, and organize all required information when onboarding new properties",
+      "Support setup and readiness of properties for short-term rental operations",
     ],
   },
   {
     title: "Inventory & Package Management",
     items: [
-      "Receive, track, organize, and deliver inventory and supplies",
-      "Ensure all properties are properly stocked at all times",
+      "Receive, track, organize, and deliver inventory, supplies, and packages",
+      "Ensure properties are properly stocked and operational",
     ],
   },
   {
     title: "Property Inspections",
     items: [
-      "Conduct periodic on-site inspections for quality, cleanliness, and functionality",
-      "Identify issues early and report them promptly",
+      "Conduct periodic on-site inspections to maintain quality, cleanliness, and functionality standards",
+      "Identify issues early and communicate clearly with the team",
     ],
   },
   {
     title: "Key & Access Management",
     items: [
-      "Manage keys, lockboxes, and access systems for all properties",
-      "Coordinate access for team members, vendors, and guests",
+      "Manage keys, lockboxes, and access systems securely",
+      "Coordinate access for team members, vendors, and guests as needed",
     ],
   },
   {
     title: "Light Maintenance & Upkeep",
     items: [
-      "Handle basic tasks such as replacing batteries and light bulbs",
-      "Identify issues that need vendor escalation",
+      "Perform basic maintenance tasks (changing batteries, light bulbs, etc.)",
+      "Identify maintenance issues requiring vendor or team escalation",
     ],
   },
   {
@@ -167,10 +167,10 @@ const JobsPage = () => {
 
         {/* Key Responsibilities */}
         <Section title="Key Responsibilities">
-          <div className="grid gap-4">
+          <div className="space-y-8">
             {responsibilities.map((r) => (
-              <div key={r.title} className="rounded-lg bg-card-alt p-5">
-                <h3 className="text-xs font-sans font-bold tracking-[0.15em] uppercase text-foreground mb-3">
+              <div key={r.title}>
+                <h3 className="text-sm font-sans font-bold tracking-[0.12em] uppercase text-foreground mb-3">
                   {r.title}
                 </h3>
                 <BulletList items={r.items} />
