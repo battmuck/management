@@ -167,10 +167,10 @@ const JobsPage = () => {
 
         {/* Key Responsibilities */}
         <Section title="Key Responsibilities">
-          <div className="space-y-6">
+          <div className="grid gap-4">
             {responsibilities.map((r) => (
-              <div key={r.title}>
-                <h3 className="text-xs font-sans font-bold tracking-[0.15em] uppercase text-foreground mb-2">
+              <div key={r.title} className="rounded-lg bg-card-alt p-5">
+                <h3 className="text-xs font-sans font-bold tracking-[0.15em] uppercase text-foreground mb-3">
                   {r.title}
                 </h3>
                 <BulletList items={r.items} />
