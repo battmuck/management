@@ -99,8 +99,8 @@ const JobsPage = () => {
     <div className="min-h-screen bg-background">
       {/* Header / Hero */}
       <header className="section-padding pb-10 md:pb-14">
-        <div className="max-w-2xl mx-auto text-center">
-          <p className="text-xs font-sans font-semibold tracking-[0.2em] uppercase text-muted-foreground mb-4">
+        <div className="max-w-2xl mx-auto">
+          <p className="text-xs font-sans font-semibold tracking-[0.2em] uppercase text-muted-foreground mb-2">
             Hawaii Vacation Homes
           </p>
 
@@ -108,14 +108,14 @@ const JobsPage = () => {
             On-Site Property Coordinator
           </h1>
 
-          {/* Metadata chips */}
-          <div className="flex flex-wrap justify-center gap-3 mb-8">
+          {/* Metadata chips - inline */}
+          <div className="flex flex-wrap gap-x-5 gap-y-2 mb-8">
             {chips.map(({ icon: Icon, label }) => (
               <span
                 key={label}
-                className="inline-flex items-center gap-1.5 rounded-full bg-card-alt px-3.5 py-1.5 text-sm font-sans text-foreground"
+                className="inline-flex items-center gap-1.5 text-sm font-sans text-muted-foreground"
               >
-                <Icon className="w-4 h-4 text-primary" />
+                <Icon className="w-4 h-4 text-muted-foreground" />
                 {label}
               </span>
             ))}
@@ -126,6 +126,8 @@ const JobsPage = () => {
               Submit Your Application
             </a>
           </Button>
+
+          <hr className="border-border mt-10" />
         </div>
       </header>
 
