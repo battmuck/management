@@ -118,6 +118,70 @@ const ReferralPage = () => {
         </div>
       </section>
 
+      {/* Agent Benefits */}
+      <section className="section-padding bg-card">
+        <div className="container-narrow mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-foreground mb-4">
+              Why Agents Partner With Us
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground font-sans max-w-2xl mx-auto leading-relaxed">
+              This isn't just a referral fee — it's a long-term partnership that grows your business.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {agentBenefits.map((benefit) => (
+              <div
+                key={benefit.title}
+                className="group bg-background border border-border rounded-lg p-6 hover:shadow-lg hover:border-primary/30 transition-all duration-300"
+              >
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                  <benefit.icon className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-serif font-semibold text-foreground mb-2">
+                  {benefit.title}
+                </h3>
+                <p className="text-muted-foreground font-sans text-base leading-relaxed">
+                  {benefit.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Owner Benefits */}
+      <section className="section-padding bg-background">
+        <div className="container-narrow mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-foreground mb-4">
+              Why Your Clients Will Thank You
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground font-sans max-w-2xl mx-auto leading-relaxed">
+              When you refer an owner to us, you're connecting them with a proven, results-driven management team.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {ownerBenefits.map((benefit) => (
+              <div
+                key={benefit.title}
+                className="group bg-card border border-border rounded-lg p-6 hover:shadow-lg hover:border-primary/30 transition-all duration-300"
+              >
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                  <benefit.icon className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-serif font-semibold text-foreground mb-2">
+                  {benefit.title}
+                </h3>
+                <p className="text-muted-foreground font-sans text-base leading-relaxed">
+                  {benefit.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* How It Works */}
       <section className="section-padding bg-card">
         <div className="container-narrow mx-auto">
@@ -143,70 +207,6 @@ const ReferralPage = () => {
                 </h3>
                 <p className="text-muted-foreground font-sans text-base leading-relaxed">
                   {step.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Agent Benefits */}
-      <section className="section-padding bg-background">
-        <div className="container-narrow mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-foreground mb-4">
-              What's In It for You
-            </h2>
-            <p className="text-lg md:text-xl text-muted-foreground font-sans max-w-2xl mx-auto leading-relaxed">
-              This isn't just a referral fee — it's a long-term partnership that grows your business.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            {agentBenefits.map((benefit) => (
-              <div
-                key={benefit.title}
-                className="group bg-card border border-border rounded-lg p-6 hover:shadow-lg hover:border-primary/30 transition-all duration-300"
-              >
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                  <benefit.icon className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="text-xl font-serif font-semibold text-foreground mb-2">
-                  {benefit.title}
-                </h3>
-                <p className="text-muted-foreground font-sans text-base leading-relaxed">
-                  {benefit.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Owner Benefits */}
-      <section className="section-padding bg-card">
-        <div className="container-narrow mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-foreground mb-4">
-              Why Your Clients Will Thank You
-            </h2>
-            <p className="text-lg md:text-xl text-muted-foreground font-sans max-w-2xl mx-auto leading-relaxed">
-              When you refer an owner to us, you're connecting them with a proven, results-driven management team.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {ownerBenefits.map((benefit) => (
-              <div
-                key={benefit.title}
-                className="group bg-background border border-border rounded-lg p-6 hover:shadow-lg hover:border-primary/30 transition-all duration-300"
-              >
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                  <benefit.icon className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="text-xl font-serif font-semibold text-foreground mb-2">
-                  {benefit.title}
-                </h3>
-                <p className="text-muted-foreground font-sans text-base leading-relaxed">
-                  {benefit.description}
                 </p>
               </div>
             ))}
