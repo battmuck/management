@@ -35,7 +35,7 @@ const agentBenefits = [
   },
   {
     icon: ArrowRight,
-    title: "We're Not Competitors",
+    title: "Your Listings Stay Yours",
     description: "We manage properties — we don't buy or sell them. If your referred client ever decides to sell, we refer them right back to you as their agent.",
   },
   {
@@ -69,7 +69,7 @@ const ownerBenefits = [
   {
     icon: Shield,
     title: "Zero Hidden Fees",
-    description: "One transparent management fee. No surprise charges for photography, marketing, or maintenance markups.",
+    description: "One transparent management fee. We cover new listing photography, charge zero onboarding fees, and never mark up maintenance costs.",
   },
   {
     icon: Star,
