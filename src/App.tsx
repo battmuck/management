@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import CompetitorPage from "./pages/CompetitorPage";
 import JobsPage from "./pages/JobsPage";
+import ReferralPage from "./pages/ReferralPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -19,6 +20,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Navigate to="/myperfectstays" replace />} />
           <Route path="/jobs" element={<JobsPage />} />
+          <Route path="/referral" element={<ReferralPage />} />
           <Route path="/:competitorSlug" element={<CompetitorPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
