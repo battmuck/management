@@ -4,6 +4,7 @@ import { getCompetitor } from "@/config/competitors";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import ComparisonSection from "@/components/ComparisonSection";
+import EarningsCalculator from "@/components/EarningsCalculator";
 import BenefitsSection from "@/components/BenefitsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import GuestReviewsSection from "@/components/GuestReviewsSection";
@@ -47,6 +48,7 @@ const CompetitorPage = () => {
       <main>
         <HeroSection competitor={competitor} />
         <ComparisonSection competitor={competitor} />
+        <EarningsCalculator />
         <BenefitsSection />
         <TestimonialsSection />
         <GuestReviewsSection />

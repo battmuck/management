@@ -26,7 +26,7 @@ const HeroSection = ({ competitor }: HeroSectionProps) => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center pt-24 md:pt-28 pb-16">
+    <section id="hero" className="relative min-h-screen flex items-center pt-24 md:pt-28 pb-16">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -46,7 +46,7 @@ const HeroSection = ({ competitor }: HeroSectionProps) => {
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-primary-foreground mb-6 leading-tight animate-fade-in" style={{ animationDelay: '0.1s' }}>
               {competitor?.heroHeadline || "Choosing the Right"}{" "}
-              <span className="text-primary drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">{competitor?.heroSubheadline || "Maui Property Manager?"}</span>
+              <span className="text-[hsl(173_45%_72%)] drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">{competitor?.heroSubheadline || "Maui Property Manager?"}</span>
             </h1>
             
             <p className="text-lg md:text-xl text-primary-foreground/85 font-sans font-light max-w-xl mx-auto lg:mx-0 mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>

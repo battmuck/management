@@ -18,16 +18,15 @@ export const competitors: Record<string, CompetitorConfig> = {
     metaTitle: "Hawaii Vacation Homes vs MyPerfectStays",
     metaDescription: "Compare Hawaii Vacation Homes to MyPerfectStays. Boutique Maui vacation rental management with 32% higher revenue, 100% owner retention, and transparent pricing.",
   },
-  // Add more competitors here as needed
-  // example: {
-  //   slug: "example",
-  //   name: "Example Company",
-  //   tagline: "Example Company vs Hawaii Vacation Homes",
-  //   heroHeadline: "Looking for Better",
-  //   heroSubheadline: "Property Management?",
-  //   metaTitle: "Hawaii Vacation Homes vs Example Company",
-  //   metaDescription: "Compare Hawaii Vacation Homes to Example Company...",
-  // },
+  vacasa: {
+    slug: "vacasa",
+    name: "Vacasa",
+    tagline: "Vacasa vs Hawaii Vacation Homes",
+    heroHeadline: "Choosing the Right",
+    heroSubheadline: "Maui Property Manager?",
+    metaTitle: "Hawaii Vacation Homes vs Vacasa",
+    metaDescription: "Compare Hawaii Vacation Homes to Vacasa. Boutique Maui vacation rental management with 32% higher revenue, 100% owner retention, and transparent pricing.",
+  },
 };
 
 export const getCompetitor = (slug: string): CompetitorConfig | undefined => {

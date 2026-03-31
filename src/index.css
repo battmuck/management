@@ -120,4 +120,41 @@
   .container-narrow {
     @apply max-w-6xl mx-auto;
   }
+
+  /* Range input — styled for teal brand */
+  .slider-teal {
+    @apply w-full h-2 rounded-full appearance-none cursor-pointer outline-none;
+    background: linear-gradient(
+      to right,
+      hsl(var(--primary)) 0%,
+      hsl(var(--primary)) var(--slider-pct, 12%),
+      hsl(var(--border)) var(--slider-pct, 12%),
+      hsl(var(--border)) 100%
+    );
+  }
+  .slider-teal:focus-visible {
+    @apply ring-2 ring-ring ring-offset-2;
+  }
+  .slider-teal::-webkit-slider-thumb {
+    @apply appearance-none w-5 h-5 rounded-full cursor-pointer;
+    background: hsl(var(--primary));
+    border: 2px solid white;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    margin-top: -6px;
+  }
+  .slider-teal::-moz-range-thumb {
+    @apply w-5 h-5 rounded-full cursor-pointer;
+    background: hsl(var(--primary));
+    border: 2px solid white;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  }
+  .slider-teal::-webkit-slider-runnable-track {
+    height: 0.5rem;
+    border-radius: 9999px;
+  }
+  .slider-teal::-moz-range-track {
+    height: 0.5rem;
+    border-radius: 9999px;
+    background: transparent;
+  }
 }
