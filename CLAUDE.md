@@ -2,6 +2,9 @@
 
 Boutique Maui vacation rental property management company. This is a conversion-focused marketing site with one primary goal: get Maui property owners to submit the lead form.
 
+## Copy Style Rules
+- **No em dashes** — do not use em dashes (—) anywhere in copy. Use a period, comma, or rewrite the sentence instead.
+
 ## Business Context
 
 ### What the company does

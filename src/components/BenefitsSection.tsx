@@ -9,7 +9,7 @@ const benefits = [
   {
     icon: Users,
     title: "Boutique Management",
-    description: "Every owner, guest, and listing receives personalized attention—not a one-size-fits-all approach.",
+    description: "Every owner, guest, and listing receives personalized attention. Not a one-size-fits-all approach.",
   },
   {
     icon: Shield,

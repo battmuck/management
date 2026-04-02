@@ -28,25 +28,25 @@ const approaches = [
     icon: Shield,
     title: "Transparent Fees",
     description:
-      "A single flat management fee applied only to accommodation revenue. No markups on maintenance, no hidden costs.",
+      "One flat management fee applied only to accommodation revenue. No markups on maintenance, no onboarding costs, no surprises.",
   },
   {
     icon: TrendingUp,
     title: "Dynamic Pricing",
     description:
-      "Proprietary algorithms and daily market analysis ensure your property is always priced to maximize occupancy and daily rates.",
+      "Daily market analysis keeps your property priced to maximize occupancy and revenue across every season and booking window.",
   },
   {
     icon: Users,
     title: "Boutique Service",
     description:
-      "Dedicated portfolio managers mean you're not just a number. We provide customized care strategies tailored to your specific home.",
+      "Every property gets hands-on, personalized care. Your home isn't just a number in a portfolio. It gets individualized attention from a team that treats it like their own.",
   },
   {
     icon: Home,
     title: "Asset Protection",
     description:
-      "Rigorous guest screening, professional preventative maintenance, and strict local presence protect your valuable real estate investment.",
+      "Proactive maintenance and a local presence on Maui means issues get caught early. We care for your property the way we'd care for our own home.",
   },
 ];
 
@@ -127,32 +127,22 @@ const ManagementPage = () => {
             className="h-10 md:h-12 shrink-0"
           />
 
-          {/* Nav — desktop only */}
-          <nav className="hidden lg:flex items-center gap-7">
-            <a
-              href="https://hawaiivacationhomes.com/search-results/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-sans font-medium text-foreground/70 hover:text-foreground transition-colors"
-            >
-              Our Properties
-            </a>
-            {[
-              { label: "Why Choose Us", id: "benefits" },
-              { label: "Calculate Earnings", id: "earnings-calculator" },
-              { label: "Contact", id: "contact-form" },
-            ].map((link) => (
-              <button
-                key={link.label}
-                onClick={() => scrollTo(link.id)}
-                className="text-sm font-sans font-medium text-foreground/70 hover:text-foreground transition-colors cursor-pointer"
-              >
-                {link.label}
-              </button>
-            ))}
-          </nav>
-
           <div className="flex items-center gap-4">
+            {/* Nav — desktop only */}
+            <nav className="hidden lg:flex items-center gap-7 mr-2">
+              {[
+                { label: "Why Choose Us", id: "benefits" },
+                { label: "Calculate Earnings", id: "earnings-calculator" },
+              ].map((link) => (
+                <button
+                  key={link.label}
+                  onClick={() => scrollTo(link.id)}
+                  className="text-sm font-sans font-medium text-foreground/70 hover:text-foreground transition-colors cursor-pointer"
+                >
+                  {link.label}
+                </button>
+              ))}
+            </nav>
             <a
               href="tel:8087935372"
               className="hidden md:flex items-center gap-2 text-sm font-sans font-medium text-foreground/70 hover:text-foreground transition-colors"
@@ -197,7 +187,7 @@ const ManagementPage = () => {
                   className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-primary-foreground mb-6 leading-tight animate-fade-in"
                   style={{ animationDelay: "0.1s" }}
                 >
-                  Expert Vacation Rental Management in Maui —{" "}
+                  Expert Vacation Rental Management in Maui:{" "}
                   <span className="text-[hsl(173_45%_72%)] drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
                     More Revenue, Zero Stress
                   </span>
@@ -292,7 +282,7 @@ const ManagementPage = () => {
                   ))}
                 </div>
                 <p className="text-base md:text-lg text-muted-foreground font-sans leading-relaxed mb-5">
-                  Owning a vacation rental on Maui should feel rewarding — not overwhelming. At Hawaii Vacation Homes, we offer hands-on, performance-driven management designed to protect your investment, maximize revenue, and deliver exceptional guest experiences. As a locally based, family-run team, we're on-island every day, ensuring your property is cared for with the same attention and pride as our own.
+                  Owning a vacation rental on Maui should feel rewarding, not overwhelming. At Hawaii Vacation Homes, we offer hands-on, performance-driven management designed to protect your investment, maximize revenue, and deliver exceptional guest experiences. As a locally based, family-run team, we're on-island every day, ensuring your property is cared for with the same attention and pride as our own.
                 </p>
                 <p className="text-base md:text-lg text-muted-foreground font-sans leading-relaxed mb-8">
                   From high-performing marketing and transparent pricing to professional cleaning, maintenance coordination, and 24/7 guest support, we handle every detail so you never have to stress about your home.
@@ -340,7 +330,7 @@ const ManagementPage = () => {
               {approaches.map((item) => (
                 <div
                   key={item.title}
-                  className="bg-card border border-border/40 rounded-xl p-8 hover:shadow-md transition-shadow"
+                  className="bg-card border border-border/40 rounded-xl p-6 hover:shadow-md transition-shadow"
                 >
                   <item.icon className="w-8 h-8 text-primary mb-5" />
                   <h3 className="text-lg font-serif font-semibold text-foreground mb-2">

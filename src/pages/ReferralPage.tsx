@@ -45,7 +45,7 @@ const agentBenefits = [
   {
     icon: ArrowRight,
     title: "Your Listings Stay Yours",
-    description: "We manage properties — we don't buy or sell them. If your referred client ever decides to sell, we refer them right back to you as their agent.",
+    description: "We manage properties. We don't buy or sell them. If your referred client ever decides to sell, we refer them right back to you as their agent.",
   },
   {
     icon: BookOpen,
@@ -55,7 +55,7 @@ const agentBenefits = [
   {
     icon: BarChart3,
     title: "Free Revenue Estimates",
-    description: "We provide complimentary revenue projections for any properties you're listing or that your buyers are considering — with optional brokerage branding on the report.",
+    description: "We provide complimentary revenue projections for any properties you're listing or that your buyers are considering, with optional brokerage branding on the report.",
   },
 ];
 
@@ -73,7 +73,7 @@ const ownerBenefits = [
   {
     icon: Users,
     title: "80%+ Owner Referrals",
-    description: "The majority of our business comes from happy owners referring other owners — a testament to our results.",
+    description: "The majority of our business comes from happy owners referring other owners, a testament to our results.",
   },
   {
     icon: Shield,
@@ -83,7 +83,7 @@ const ownerBenefits = [
   {
     icon: Star,
     title: "Boutique, Personalized Care",
-    description: "Every property gets individualized attention — not a one-size-fits-all corporate approach.",
+    description: "Every property gets individualized attention. No one-size-fits-all corporate approach.",
   },
 ];
 
@@ -156,7 +156,7 @@ const ReferralPage = () => {
               Why Agents Partner With Us
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground font-sans max-w-2xl mx-auto leading-relaxed">
-              This isn't just a referral fee — it's a long-term partnership that grows your business.
+              This isn't just a referral fee. It's a long-term partnership that grows your business.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
