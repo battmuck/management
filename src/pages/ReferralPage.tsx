@@ -4,7 +4,16 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import GuestReviewsSection from "@/components/GuestReviewsSection";
+import EarningsCalculator from "@/components/EarningsCalculator";
 import heroImage from "@/assets/hero-maui.jpg";
+
+const credibilityStats = [
+  { value: "4.96★", label: "Average Rating" },
+  { value: "18%", label: "Above Market Revenue" },
+  { value: "100%", label: "Owner Retention" },
+  { value: "700+", label: "5-Star Reviews" },
+];
 
 const steps = [
   {
@@ -104,19 +113,40 @@ const ReferralPage = () => {
         </div>
         <div className="relative z-10 text-center px-4 py-20 max-w-4xl mx-auto">
           <p className="text-primary-foreground/80 font-sans text-sm tracking-widest uppercase mb-4">
-            Real Estate Agent Referral Program
+            Agent Referral Program
           </p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-primary-foreground mb-6 leading-tight">
-            Partner With Us. Earn $1,200 Per Referral.
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-primary-foreground mb-3 leading-tight">
+            A Property Manager Worth Referring.
           </h1>
-          <p className="text-lg md:text-xl text-primary-foreground/90 font-sans max-w-2xl mx-auto mb-8 leading-relaxed">
-            Refer property owners to Maui's most trusted boutique vacation rental manager — and get paid for every signed contract. We manage. You earn. Your clients win.
+          <p className="text-lg text-primary-foreground/80 font-sans max-w-2xl mx-auto mb-8 leading-relaxed">
+            No hidden fees. No surprise charges. 18% above-market revenue for your clients. Refer with confidence and <strong className="font-semibold text-primary-foreground">earn $1,200 per signed contract.</strong>
           </p>
           <Button size="lg" variant="secondary" onClick={scrollToForm} className="font-sans font-semibold text-base px-8">
-            Start Referring Today
+            See Why Agents Refer to Us
           </Button>
         </div>
       </section>
+
+      {/* Credibility Stats Bar */}
+      <div className="bg-foreground">
+        <div className="container-narrow mx-auto px-4 py-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            {credibilityStats.map((stat, i) => (
+              <div
+                key={stat.label}
+                className={`px-4 ${i < credibilityStats.length - 1 ? "md:border-r md:border-primary-foreground/10" : ""}`}
+              >
+                <p className="text-4xl md:text-5xl font-serif font-bold text-primary-foreground leading-none">
+                  {stat.value}
+                </p>
+                <p className="text-xs font-sans uppercase tracking-widest text-primary mt-2">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
 
       {/* Agent Benefits */}
       <section className="section-padding bg-card">
@@ -182,6 +212,9 @@ const ReferralPage = () => {
         </div>
       </section>
 
+      {/* Earnings Calculator */}
+      <EarningsCalculator heading="See How Much More Your Clients Could Earn and Save" />
+
       {/* How It Works */}
       <section className="section-padding bg-card">
         <div className="container-narrow mx-auto">
@@ -216,6 +249,9 @@ const ReferralPage = () => {
 
       {/* Testimonials */}
       <TestimonialsSection />
+
+      {/* Guest Reviews */}
+      <GuestReviewsSection />
 
       {/* Contact Form */}
       <section id="referral-form" className="section-padding bg-background">

@@ -6,6 +6,8 @@ export interface CompetitorConfig {
   heroSubheadline: string;
   metaTitle: string;
   metaDescription: string;
+  formId?: string;
+  formName?: string;
 }
 
 export const competitors: Record<string, CompetitorConfig> = {
@@ -26,6 +28,8 @@ export const competitors: Record<string, CompetitorConfig> = {
     heroSubheadline: "Maui Property Manager?",
     metaTitle: "Hawaii Vacation Homes vs Vacasa",
     metaDescription: "Compare Hawaii Vacation Homes to Vacasa. Boutique Maui vacation rental management with 32% higher revenue, 100% owner retention, and transparent pricing.",
+    formId: "JXIHFP8UKDl66myqY3K5",
+    formName: "Property Management - Vacasa",
   },
 };
 

@@ -52,7 +52,7 @@ const CompetitorPage = () => {
         <BenefitsSection />
         <TestimonialsSection />
         <GuestReviewsSection />
-        <ContactFormSection />
+        <ContactFormSection competitor={competitor} />
       </main>
       <Footer />
     </div>

@@ -1,6 +1,17 @@
 import { useEffect } from "react";
+import { CompetitorConfig } from "@/config/competitors";
 
-const ContactFormSection = () => {
+const DEFAULT_FORM_ID   = "NIkdCb3EJxwZ7DtCplGq";
+const DEFAULT_FORM_NAME = "Property Management - MyPerfectStays";
+
+interface ContactFormSectionProps {
+  competitor?: CompetitorConfig;
+}
+
+const ContactFormSection = ({ competitor }: ContactFormSectionProps) => {
+  const formId   = competitor?.formId   || DEFAULT_FORM_ID;
+  const formName = competitor?.formName || DEFAULT_FORM_NAME;
+
   useEffect(() => {
     // Load the form embed script (may already be loaded from hero)
     if (!document.querySelector('script[src="https://link.msgsndr.com/js/form_embed.js"]')) {
@@ -23,9 +34,9 @@ const ContactFormSection = () => {
         
         <div className="bg-background rounded-lg p-6 md:p-8 border border-border">
           <iframe
-            src="https://api.leadconnectorhq.com/widget/form/NIkdCb3EJxwZ7DtCplGq"
+            src={`https://api.leadconnectorhq.com/widget/form/${formId}`}
             style={{ width: "100%", height: "100%", border: "none", borderRadius: "3px" }}
-            id="bottom-inline-NIkdCb3EJxwZ7DtCplGq"
+            id={`bottom-inline-${formId}`}
             data-layout="{'id':'INLINE'}"
             data-trigger-type="alwaysShow"
             data-trigger-value=""
@@ -33,11 +44,11 @@ const ContactFormSection = () => {
             data-activation-value=""
             data-deactivation-type="neverDeactivate"
             data-deactivation-value=""
-            data-form-name="Property Management - Competitor Form"
+            data-form-name={formName}
             data-height="593"
-            data-layout-iframe-id="bottom-inline-NIkdCb3EJxwZ7DtCplGq"
-            data-form-id="NIkdCb3EJxwZ7DtCplGq"
-            title="Property Management - Competitor Form"
+            data-layout-iframe-id={`bottom-inline-${formId}`}
+            data-form-id={formId}
+            title={formName}
             scrolling="no"
           />
         </div>

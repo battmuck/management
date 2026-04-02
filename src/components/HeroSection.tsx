@@ -7,9 +7,14 @@ interface HeroSectionProps {
   competitor?: CompetitorConfig;
 }
 
+const DEFAULT_FORM_ID   = "NIkdCb3EJxwZ7DtCplGq";
+const DEFAULT_FORM_NAME = "Property Management - MyPerfectStays";
+
 const HeroSection = ({ competitor }: HeroSectionProps) => {
   const competitorName = competitor?.name || "MyPerfectStays";
   const tagline = competitor?.tagline || `${competitorName} vs Hawaii Vacation Homes`;
+  const formId   = competitor?.formId   || DEFAULT_FORM_ID;
+  const formName = competitor?.formName || DEFAULT_FORM_NAME;
   useEffect(() => {
     // Load the form embed script
     const script = document.createElement("script");
@@ -75,9 +80,9 @@ const HeroSection = ({ competitor }: HeroSectionProps) => {
             </p>
             
             <iframe
-              src="https://api.leadconnectorhq.com/widget/form/NIkdCb3EJxwZ7DtCplGq"
+              src={`https://api.leadconnectorhq.com/widget/form/${formId}`}
               style={{ width: "100%", height: "100%", minHeight: "450px", border: "none", borderRadius: "3px" }}
-              id="inline-NIkdCb3EJxwZ7DtCplGq"
+              id={`inline-${formId}`}
               data-layout="{'id':'INLINE'}"
               data-trigger-type="alwaysShow"
               data-trigger-value=""
@@ -85,11 +90,11 @@ const HeroSection = ({ competitor }: HeroSectionProps) => {
               data-activation-value=""
               data-deactivation-type="neverDeactivate"
               data-deactivation-value=""
-              data-form-name="Property Management - Competitor Form"
+              data-form-name={formName}
               data-height="593"
-              data-layout-iframe-id="inline-NIkdCb3EJxwZ7DtCplGq"
-              data-form-id="NIkdCb3EJxwZ7DtCplGq"
-              title="Property Management - Competitor Form"
+              data-layout-iframe-id={`inline-${formId}`}
+              data-form-id={formId}
+              title={formName}
               scrolling="no"
             />
           </div>

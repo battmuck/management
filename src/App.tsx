@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import CompetitorPage from "./pages/CompetitorPage";
+import ManagementPage from "./pages/ManagementPage";
 import JobsPage from "./pages/JobsPage";
 import ReferralPage from "./pages/ReferralPage";
 import NotFound from "./pages/NotFound";
@@ -19,6 +20,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Navigate to="/myperfectstays" replace />} />
+          <Route path="/management" element={<ManagementPage />} />
           <Route path="/jobs" element={<JobsPage />} />
           <Route path="/referral" element={<ReferralPage />} />
           <Route path="/:competitorSlug" element={<CompetitorPage />} />

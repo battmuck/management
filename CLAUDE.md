@@ -33,7 +33,7 @@ What agents receive when they refer an owner who signs a management agreement:
 
 ## Roadmap
 
-- **Revenue comparison widget** — planned interactive tool on competitor pages showing how much more an owner would earn with HVH vs. a competitor, based on their property. No dedicated page needed — it will be embedded inline on existing pages.
+- **Revenue comparison widget** — built and live as `EarningsCalculator.tsx`, embedded on all competitor pages between `BenefitsSection` and `TestimonialsSection`.
 
 ## Stack
 
@@ -88,10 +88,14 @@ vacasa: {
   heroSubheadline: "Maui Property Manager?",
   metaTitle: "Hawaii Vacation Homes vs Vacasa",
   metaDescription: "Compare Hawaii Vacation Homes to Vacasa. ...",
+  formId: "JXIHFP8UKDl66myqY3K5",       // optional — omit to use default MyPerfectStays form
+  formName: "Property Management - Vacasa", // optional — label for LeadConnector attribution
 },
 ```
 
 No routing or component changes needed — `/:competitorSlug` handles it automatically.
+
+If `formId`/`formName` are omitted, both forms fall back to the default MyPerfectStays form (`NIkdCb3EJxwZ7DtCplGq`).
 
 ## Design System
 
@@ -104,10 +108,11 @@ No routing or component changes needed — `/:competitorSlug` handles it automat
 
 | Service | Location | ID |
 |---|---|---|
-| LeadConnector form | HeroSection + ContactFormSection | `NIkdCb3EJxwZ7DtCplGq` |
+| LeadConnector form (MyPerfectStays) | HeroSection + ContactFormSection | `NIkdCb3EJxwZ7DtCplGq` |
+| LeadConnector form (Vacasa) | HeroSection + ContactFormSection | `JXIHFP8UKDl66myqY3K5` |
 | Elfsight reviews widget | GuestReviewsSection | `25f1a7c3-19e2-415c-8096-ddcaa436db9e` |
 
-Both are embedded as iframes/scripts — no API keys needed in this repo.
+Form IDs are configured per-competitor in `competitors.ts` via `formId`/`formName` fields. Both are embedded as iframes/scripts — no API keys needed in this repo.
 
 ## Common Commands
 
