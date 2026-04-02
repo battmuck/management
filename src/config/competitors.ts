@@ -19,6 +19,8 @@ export const competitors: Record<string, CompetitorConfig> = {
     heroSubheadline: "Maui Property Manager?",
     metaTitle: "Hawaii Vacation Homes vs MyPerfectStays",
     metaDescription: "Compare Hawaii Vacation Homes to MyPerfectStays. Boutique Maui vacation rental management with 32% higher revenue, 100% owner retention, and transparent pricing.",
+    formId: "NIkdCb3EJxwZ7DtCplGq",
+    formName: "Property Management - MyPerfectStays",
   },
   vacasa: {
     slug: "vacasa",

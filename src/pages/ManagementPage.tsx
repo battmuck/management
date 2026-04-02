@@ -13,8 +13,8 @@ import GuestReviewsSection from "@/components/GuestReviewsSection";
 import ContactFormSection from "@/components/ContactFormSection";
 import Footer from "@/components/Footer";
 
-const FORM_ID = "NIkdCb3EJxwZ7DtCplGq";
-const FORM_NAME = "Property Management - MyPerfectStays";
+const FORM_ID = "RhDA78jWo8HwM8qSO3kN";
+const FORM_NAME = "Property Management - General";
 
 const stats = [
   { value: "4.96★", label: "Average Rating" },

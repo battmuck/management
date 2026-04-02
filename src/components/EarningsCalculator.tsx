@@ -281,7 +281,7 @@ export default function EarningsCalculator({ heading }: EarningsCalculatorProps 
               <div>
                 <div className="flex items-center gap-1.5 mb-2">
                   <Star className="w-3.5 h-3.5 text-primary fill-primary" />
-                  <p className="text-[10px] font-sans font-bold uppercase tracking-widest text-primary">The Advantage</p>
+                  <p className="text-[10px] font-sans font-bold uppercase tracking-widest text-primary">The Hawaii Vacation Homes Advantage</p>
                 </div>
                 <p className="text-sm font-sans text-primary-foreground/60 mb-1">Total estimated increase in profit:</p>
                 <div className="flex items-baseline gap-1.5">
