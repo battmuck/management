@@ -187,7 +187,7 @@ const ManagementPage = () => {
                   className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-primary-foreground mb-6 leading-tight animate-fade-in"
                   style={{ animationDelay: "0.1s" }}
                 >
-                  Expert Vacation Rental Management in Maui:{" "}
+                  Expert Vacation Rental Management in Maui.{" "}
                   <span className="text-[hsl(173_45%_72%)] drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
                     More Revenue, Zero Stress
                   </span>
