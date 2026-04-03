@@ -1,11 +1,11 @@
-import { useEffect } from "react";
-import { DollarSign, Users, BookOpen, TrendingUp, Shield, Heart, ArrowRight, Handshake, FileSignature, BadgeDollarSign, Home, BarChart3, Star } from "lucide-react";
+import { DollarSign, BookOpen, TrendingUp, Shield, Heart, ArrowRight, Handshake, FileSignature, BadgeDollarSign, BarChart3, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import GuestReviewsSection from "@/components/GuestReviewsSection";
 import EarningsCalculator from "@/components/EarningsCalculator";
+import ContactFormSection from "@/components/ContactFormSection";
 import heroImage from "@/assets/hero-maui.jpg";
 
 const credibilityStats = [
@@ -44,7 +44,7 @@ const agentBenefits = [
   },
   {
     icon: ArrowRight,
-    title: "Your Listings Stay Yours",
+    title: "Your Listings. Your Clients.",
     description: "We manage properties. We don't buy or sell them. If your referred client ever decides to sell, we refer them right back to you as their agent.",
   },
   {
@@ -67,13 +67,8 @@ const ownerBenefits = [
   },
   {
     icon: TrendingUp,
-    title: "15% Above Market Average",
-    description: "In 2025, our owners earned 15% higher revenue than the average Maui short-term rental.",
-  },
-  {
-    icon: Users,
-    title: "80%+ Owner Referrals",
-    description: "The majority of our business comes from happy owners referring other owners, a testament to our results.",
+    title: "18% Above Market Average",
+    description: "In 2025, our owners earned 18% higher revenue than the average Maui short-term rental.",
   },
   {
     icon: Shield,
@@ -88,15 +83,6 @@ const ownerBenefits = [
 ];
 
 const ReferralPage = () => {
-  useEffect(() => {
-    if (!document.querySelector('script[src="https://link.msgsndr.com/js/form_embed.js"]')) {
-      const script = document.createElement("script");
-      script.src = "https://link.msgsndr.com/js/form_embed.js";
-      script.async = true;
-      document.body.appendChild(script);
-    }
-  }, []);
-
   const scrollToForm = () => {
     document.getElementById("referral-form")?.scrollIntoView({ behavior: "smooth" });
   };
@@ -122,7 +108,7 @@ const ReferralPage = () => {
             No hidden fees. No surprise charges. 18% above-market revenue for your clients. Refer with confidence and <strong className="font-semibold text-primary-foreground">earn $1,200 per signed contract.</strong>
           </p>
           <Button size="lg" variant="secondary" onClick={scrollToForm} className="font-sans font-semibold text-base px-8">
-            See Why Agents Refer to Us
+            Partner with Us
           </Button>
         </div>
       </section>
@@ -191,7 +177,7 @@ const ReferralPage = () => {
               When you refer an owner to us, you're connecting them with a proven, results-driven management team.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {ownerBenefits.map((benefit) => (
               <div
                 key={benefit.title}
@@ -213,10 +199,10 @@ const ReferralPage = () => {
       </section>
 
       {/* Earnings Calculator */}
-      <EarningsCalculator heading="See How Much More Your Clients Could Earn and Save" />
+      <EarningsCalculator heading="See How Much More Your Clients Could Earn (and Save)" />
 
       {/* How It Works */}
-      <section className="section-padding bg-card">
+      <section className="pb-16 md:pb-20 pt-4 md:pt-5 bg-card">
         <div className="container-narrow mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-foreground mb-4">
@@ -254,36 +240,13 @@ const ReferralPage = () => {
       <GuestReviewsSection />
 
       {/* Contact Form */}
-      <section id="referral-form" className="section-padding bg-background">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-foreground mb-4">
-            Start Referring Today
-          </h2>
-          <p className="text-lg md:text-xl text-muted-foreground font-sans mb-8 leading-relaxed">
-            Fill out the form below and we'll reach out to discuss the partnership. It only takes a minute.
-          </p>
-          <div className="bg-card rounded-lg p-6 md:p-8 border border-border">
-            <iframe
-              src="https://api.leadconnectorhq.com/widget/form/NIkdCb3EJxwZ7DtCplGq"
-              style={{ width: "100%", height: "100%", border: "none", borderRadius: "3px" }}
-              id="referral-inline-NIkdCb3EJxwZ7DtCplGq"
-              data-layout="{'id':'INLINE'}"
-              data-trigger-type="alwaysShow"
-              data-trigger-value=""
-              data-activation-type="alwaysActivated"
-              data-activation-value=""
-              data-deactivation-type="neverDeactivate"
-              data-deactivation-value=""
-              data-form-name="Property Management - Competitor Form"
-              data-height="593"
-              data-layout-iframe-id="referral-inline-NIkdCb3EJxwZ7DtCplGq"
-              data-form-id="NIkdCb3EJxwZ7DtCplGq"
-              title="Referral Program Contact Form"
-              scrolling="no"
-            />
-          </div>
-        </div>
-      </section>
+      <ContactFormSection
+        formId="OjmzRHjGXQhOs1UFlifp"
+        formName="Agent Referral Form"
+        heading="Partner with Us"
+        subheading="Fill out the form below and we'll reach out to discuss the partnership. It only takes a minute."
+        sectionId="referral-form"
+      />
 
       <Footer />
     </div>

@@ -7,11 +7,16 @@ const DEFAULT_FORM_NAME = "Property Management - General";
 
 interface ContactFormSectionProps {
   competitor?: CompetitorConfig;
+  formId?: string;
+  formName?: string;
+  heading?: string;
+  subheading?: string;
+  sectionId?: string;
 }
 
-const ContactFormSection = ({ competitor }: ContactFormSectionProps) => {
-  const formId   = competitor?.formId   || DEFAULT_FORM_ID;
-  const formName = competitor?.formName || DEFAULT_FORM_NAME;
+const ContactFormSection = ({ competitor, formId: formIdProp, formName: formNameProp, heading, subheading, sectionId }: ContactFormSectionProps) => {
+  const formId   = formIdProp   || competitor?.formId   || DEFAULT_FORM_ID;
+  const formName = formNameProp || competitor?.formName || DEFAULT_FORM_NAME;
 
   useEffect(() => {
     if (!document.querySelector('script[src="https://link.msgsndr.com/js/form_embed.js"]')) {
@@ -23,7 +28,7 @@ const ContactFormSection = ({ competitor }: ContactFormSectionProps) => {
   }, []);
 
   return (
-    <section id="contact-form" className="section-padding bg-background">
+    <section id={sectionId || "contact-form"} className="section-padding bg-background">
       <div className="container-narrow mx-auto">
         <div className="bg-card border border-border rounded-2xl shadow-sm overflow-hidden">
           <div className="grid lg:grid-cols-2">
@@ -37,10 +42,10 @@ const ContactFormSection = ({ competitor }: ContactFormSectionProps) => {
             {/* Right — form */}
             <div className="px-8 md:px-12 pt-8 pb-4 md:pt-10 md:pb-4">
               <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-2 leading-tight">
-                Ready to Maximize Your Rental Income?
+                {heading || "Ready to Maximize Your Rental Income?"}
               </h2>
               <p className="text-base text-muted-foreground font-sans leading-relaxed">
-                Get a free, no-obligation property evaluation. We'll show you exactly how much more your Maui property could be earning.
+                {subheading || "Get a free, no-obligation property evaluation. We'll show you exactly how much more your Maui property could be earning."}
               </p>
 
               <iframe
