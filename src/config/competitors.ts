@@ -8,6 +8,7 @@ export interface CompetitorConfig {
   metaDescription: string;
   formId?: string;
   formName?: string;
+  airbnbRating?: string;
 }
 
 export const competitors: Record<string, CompetitorConfig> = {
@@ -32,6 +33,7 @@ export const competitors: Record<string, CompetitorConfig> = {
     metaDescription: "Compare Hawaii Vacation Homes to Vacasa. Boutique Maui vacation rental management with 18% higher revenue, 100% owner retention, and transparent pricing.",
     formId: "JXIHFP8UKDl66myqY3K5",
     formName: "Property Management - Vacasa",
+    airbnbRating: "4.58",
   },
 };
 

@@ -109,6 +109,12 @@ const StatusIcon = ({ status, isUs = false }: { status: "yes" | "no" | "partial"
 
 const ComparisonSection = ({ competitor }: ComparisonSectionProps) => {
   const competitorName = competitor?.name || "MyPerfectStays";
+  const rows = comparisonData.map((row) => {
+    if (row.feature === "Airbnb Review Rating" && competitor?.airbnbRating) {
+      return { ...row, themNote: `${competitor.airbnbRating} / 5 average rating` };
+    }
+    return row;
+  });
   
   return (
     <section id="comparison" className="section-padding bg-card">
@@ -137,7 +143,7 @@ const ComparisonSection = ({ competitor }: ComparisonSectionProps) => {
               </tr>
             </thead>
             <tbody>
-              {comparisonData.map((item, index) => (
+              {rows.map((item, index) => (
                 <tr 
                   key={item.feature} 
                   className="group transition-colors hover:bg-muted/30"
@@ -169,7 +175,7 @@ const ComparisonSection = ({ competitor }: ComparisonSectionProps) => {
 
         {/* Mobile Cards */}
         <div className="md:hidden space-y-3">
-          {comparisonData.map((item) => (
+          {rows.map((item) => (
             <div key={item.feature} className="bg-card border border-border rounded-xl p-4 shadow-sm">
               <h3 className="font-sans font-semibold text-foreground mb-4 text-center">{item.feature}</h3>
               <div className="grid grid-cols-2 gap-3">
