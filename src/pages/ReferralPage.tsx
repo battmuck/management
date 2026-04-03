@@ -1,7 +1,8 @@
 import { DollarSign, BookOpen, TrendingUp, Shield, Heart, ArrowRight, Handshake, FileSignature, BadgeDollarSign, BarChart3, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Header from "@/components/Header";
+import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
+import logoHorizontal from "@/assets/logo-horizontal.png";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import GuestReviewsSection from "@/components/GuestReviewsSection";
 import EarningsCalculator from "@/components/EarningsCalculator";
@@ -89,7 +90,35 @@ const ReferralPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      {/* ── Header ── */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between gap-8">
+          <img
+            src={logoHorizontal}
+            alt="Hawaii Vacation Homes"
+            className="h-10 md:h-12 shrink-0"
+          />
+          <div className="hidden lg:flex items-center gap-7">
+            <a
+              href="https://hawaiivacationhomes.com/search-results/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-sans font-medium text-foreground/70 hover:text-foreground transition-colors"
+            >
+              Our Properties
+            </a>
+            <Link
+              to="/management"
+              className="text-sm font-sans font-medium text-foreground/70 hover:text-foreground transition-colors"
+            >
+              Property Management
+            </Link>
+            <Button size="sm" className="font-sans font-medium" onClick={scrollToForm}>
+              Partner with Us
+            </Button>
+          </div>
+        </div>
+      </header>
 
       {/* Hero Section */}
       <section className="relative min-h-[70vh] flex items-center justify-center pt-20">
