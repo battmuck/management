@@ -142,6 +142,14 @@ const ManagementPage = () => {
                   {link.label}
                 </button>
               ))}
+              <a
+                href="https://hawaiivacationhomes.com/search-results/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-sans font-medium text-foreground/70 hover:text-foreground transition-colors"
+              >
+                Our Properties
+              </a>
             </nav>
             <a
               href="tel:8087935372"

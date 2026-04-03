@@ -167,8 +167,8 @@ export default function EarningsCalculator({ heading }: EarningsCalculatorProps 
                 <Tag className="w-4 h-4 text-primary" />
               </div>
               <div>
-                <p className="font-sans font-bold text-foreground text-base leading-tight">Common Required Additional Fees</p>
-                <p className="font-sans text-xs text-muted-foreground mt-0.5">See the typical additional fees charged by most managers to see the true cost.</p>
+                <p className="font-sans font-bold text-foreground text-base leading-tight">Fees Other Managers Charge</p>
+                <p className="font-sans text-xs text-muted-foreground mt-0.5">Most management companies charge these additional fees on top of their commission.</p>
               </div>
             </div>
 
