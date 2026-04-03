@@ -121,11 +121,13 @@ const ManagementPage = () => {
       {/* ── Header ── */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between gap-8">
-          <img
-            src={logoHorizontal}
-            alt="Hawaii Vacation Homes"
-            className="h-10 md:h-12 shrink-0"
-          />
+          <a href="https://hawaiivacationhomes.com">
+            <img
+              src={logoHorizontal}
+              alt="Hawaii Vacation Homes"
+              className="h-10 md:h-12 shrink-0"
+            />
+          </a>
 
           <div className="flex items-center gap-4">
             {/* Nav — desktop only */}
