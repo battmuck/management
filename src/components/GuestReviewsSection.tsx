@@ -3,10 +3,10 @@ import { useEffect } from "react";
 const GuestReviewsSection = () => {
   useEffect(() => {
     // Load the Elfsight platform script
-    const existingScript = document.querySelector('script[src="https://static.elfsight.com/platform/platform.js"]');
+    const existingScript = document.querySelector('script[src="https://elfsightcdn.com/platform.js"]');
     if (!existingScript) {
       const script = document.createElement("script");
-      script.src = "https://static.elfsight.com/platform/platform.js";
+      script.src = "https://elfsightcdn.com/platform.js";
       script.async = true;
       document.body.appendChild(script);
     }
