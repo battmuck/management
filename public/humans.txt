@@ -1,0 +1,13 @@
+/* TEAM */
+Founder & Operator: Matt Buck
+Company: Hawaii Vacation Homes (Hawaii Equity Management LLC)
+Location: Kīhei, Maui, Hawaii
+
+/* CONTACT */
+Email: aloha@hawaiivacationhomes.com
+Phone: 808-793-5372
+
+/* SITE */
+Language: English
+Technology: React 18, TypeScript, Vite, Tailwind CSS
+Hosted: Vercel
