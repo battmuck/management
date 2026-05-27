@@ -1,4 +1,18 @@
+import { useEffect } from 'react';
+
 const GuestReviewsSection = () => {
+  useEffect(() => {
+    // Elfsight's platform.js initializes once on page load and won't pick up
+    // widget divs that are added/re-added to the DOM by React navigation.
+    // Re-inserting the script forces it to re-scan and initialize the widget.
+    const existing = document.getElementById('elfsight-platform');
+    if (existing) existing.remove();
+    const script = document.createElement('script');
+    script.id = 'elfsight-platform';
+    script.src = 'https://elfsightcdn.com/platform.js';
+    script.async = true;
+    document.head.appendChild(script);
+  }, []);
 
   return (
     <section className="section-padding bg-card">
