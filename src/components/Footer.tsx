@@ -103,10 +103,10 @@ const Footer = () => {
             © {new Date().getFullYear()} Hawaii Vacation Homes. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-muted-foreground hover:text-foreground text-sm font-sans transition-colors">
+            <a href="https://hawaiivacationhomes.com/privacy-policy/" className="text-muted-foreground hover:text-foreground text-sm font-sans transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="text-muted-foreground hover:text-foreground text-sm font-sans transition-colors">
+            <a href="https://hawaiivacationhomes.com/terms-and-conditions/" className="text-muted-foreground hover:text-foreground text-sm font-sans transition-colors">
               Terms of Service
             </a>
           </div>
